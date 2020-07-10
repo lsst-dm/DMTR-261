@@ -164,6 +164,54 @@ The personnel involved in the test campaign is shown in the following table.
 Jeffrey Carlin }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
+& {\small Colin Slater } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
+& {\small Robert Lupton } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
+& {\small Fritz Mueller } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
+& {\small Fritz Mueller } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
+& {\small Fritz Mueller } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
+& {\small Colin Slater } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
 & {\small Jim Bosch } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -343,6 +391,66 @@ Jeffrey Carlin }
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C153}{LVV-C153}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Pipelines v20 Release DM Acceptance Test Campaign }} & Not Executed \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&
+\\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
 &  1
 & Not Executed &
@@ -583,6 +691,743 @@ All tests will be performed with LSST Science Pipelines release version
 Not provided.
 
 \subsubsection{Test Cases in LVV-C153 Test Cycle}
+
+\paragraph{ LVV-T28 - Verify implementation of Measurements in catalogs }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{\textit{ LVV-T28 } }
+test case in Jira.
+
+Verify that source measurements in catalogs are in flux units.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify and read appropriate processed precursor datasets with the
+Butler, including one containing single-visit images, one with coadds,
+and one with difference imaging.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that each of the single-visit, coadd, and difference image
+catalogs provide measurements in flux units.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmation of measurements in catalogs encoded in flux units.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T133 - Verify implementation of Provide Beam Projector Coordinate Calculation
+Software }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{\textit{ LVV-T133 } }
+test case in Jira.
+
+Verify that the DMS provides software to calculate coordinates relating
+the collimated beam projector position and telescope pupil position to
+the illumination position on the telescope optical elements and focal
+plane.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+On the LSST development cluster or notebook aspect, git clone the repo
+containing the CBP package: \url{https://github.com/lsst/cbp}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Follow the steps in the package README to install the package.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the package can be loaded in python, and that some of the
+tests in the `tests/` folder will execute.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Successful execution of test scripts, which demonstrate the calculation
+of beam projector coordinates.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1087 - Full Table Joins Functional Test }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{\textit{ LVV-T1087 } }
+test case in Jira.
+
+The objective of this test is to ensure that the full table join queries
+are performing as expected and establish a timing baseline benchmark for
+these types of queries.
+
+\textbf{ Preconditions}:\\
+QSERV has been set-up following procedure at ~LVV-T1017.
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
+s.objectId, s.id, o.ra, o.decl\\
+\textbf{~ ~ FROM} Object o, Source s WHERE o.deepSourceId=s.objectId\\
+\hspace*{0.333em} ~ \textbf{AND} s . flux\_sinc \textbf{BETWEEN} 0.3
+\textbf{AND} 0.31\\[2\baselineskip]and record execution time.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query expected to run in less than 12 hours.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
+f.psfFlux \textbf{FROM} Object o, ForcedSource f\\
+\textbf{~ ~ WHERE} o.deepSourceId=f.deepSourceId\\
+\textbf{~ ~ AND} f . psfFlux \textbf{BETWEEN} 0.13 \textbf{AND}
+0.14\\[2\baselineskip]and record execution time.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query expected to run in less than 12 hours.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1086 - Full Table Scans Functional Test }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{\textit{ LVV-T1086 } }
+test case in Jira.
+
+The objective of this test is to ensure that the full table scan queries
+are performing as expected and establish a timing baseline benchmark for
+these types of queries.
+
+\textbf{ Preconditions}:\\
+QSERV has been set-up following procedure at ~LVV-T1017.
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute query:\\[2\baselineskip]\textbf{SELECT} ra , decl , u\_psfFlux ,
+g\_psfFlux , r\_psfFlux \textbf{FROM} Object\\
+\textbf{WHERE} y\_shapeIxx \textbf{BETWEEN} 20 \textbf{AND}
+20.1\\[3\baselineskip]and record execution time and output size.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query expected to run in less than 1 hour.\\[2\baselineskip]
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
+Source \textbf{WHERE} flux\_sinc \textbf{BETWEEN} 1 \textbf{AND}
+1.1\\[2\baselineskip]and record the execution time
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query expected to run in less than 12 hours.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
+ForcedSource \textbf{WHERE} psfFlux \textbf{BETWEEN} 0.1 \textbf{AND}
+0.2\\[2\baselineskip]and record the execution time
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query expected to run in less than 12 hours.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1085 - Short Queries Functional Test }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{\textit{ LVV-T1085 } }
+test case in Jira.
+
+The objective of this test is to ensure that the short queries are
+performing as expected and establish a timing baseline benchmark for
+these types of queries.
+
+\textbf{ Preconditions}:\\
+QSERV has been set-up following procedure at ~LVV-T1017.
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute single object selection:\\[2\baselineskip]\textbf{SELECT} *
+\textbf{FROM} Object~\textbf{WHERE} deepSourceId =
+9292041530376264\\[2\baselineskip]and record execution time.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query runs in less than 10 seconds.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute spatial area selection from
+Object:\\[2\baselineskip]\textbf{SELECT COUNT(*)} \textbf{FROM} Object
+\textbf{WHERE}~\\
+
+~qserv\_areaspec\_box(316.582327, −6.839078, 316.653938, −6.781822)
+
+and record execution time.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query runs in less than 10 seconds.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1232 - Verify Implementation of Catalog Export Formats From the Portal Aspect }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{\textit{ LVV-T1232 } }
+test case in Jira.
+
+Verify that catalog data is exportable from the portal aspect in a
+variety of community-standard formats.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Navigate to the portal endpoint. ~The stable version should be used for
+this test and is currently located at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/suit/.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Currently this drops the user into an active portal environment.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Though the current stable system does not authenticate currently, this
+step and the previous one should be updated as the system evolves.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No-op.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select query type ``ADQL''.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute the example query given in the example code below by entering
+the text in the ADQL Query box, then clicking ``Search'' at the lower
+left corner of the page.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+SELECT cntr, ra, decl, w1mpro\_ep, w2mpro\_ep, w3mpro\_ep FROM
+wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS', ra, decl),
+CIRCLE('ICRS', 192.85, 27.13, .2)) = 1
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A new page will load with the search results as a table, with some plots
+as well.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Click the icon that looks like a floppy disk (it says ``Save the content
+as an IPAC, CSV, or TSV table'' when you mouse over it).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  Select ``CSV'', then specify a destination to save the file on your
+  local computer.
+\item
+  Select ``VOTable'', then specify a destination to save the file on
+  your local computer.
+\item
+  Select ``FITS'', then specify a destination to save the file on your
+  local computer.
+\end{itemize}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Open each of the files (either in TOPCAT, or using Astropy io tools).
+Confirm that the data tables are well-formed, and that each table
+contains the same columns and the same number of rows.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Currently, there is no logout mechanism on the portal.\\
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Closed browser window. ~When navigating to the portal endpoint, expect
+to execute the steps in LVV-T849.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
 
 \paragraph{ LVV-T40 - Verify implementation of Generate WCS for Visit Images }\mbox{}\\
 
