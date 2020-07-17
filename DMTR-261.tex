@@ -1190,9 +1190,9 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Navigate to the portal endpoint. ~The stable version should be used for
-this test and is currently located at:
-https://lsst-lsp-stable.ncsa.illinois.edu/portal/suit/.
+Navigate to the Portal Aspect endpoint. ~The stable version should be
+used for this test and is currently located at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/ .
 
 \medskip }
 \end{minipage}
@@ -1201,7 +1201,7 @@ https://lsst-lsp-stable.ncsa.illinois.edu/portal/suit/.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-Currently this drops the user into an active portal environment.
+A credential-entry screen should be displayed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1217,8 +1217,8 @@ Currently this drops the user into an active portal environment.
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Though the current stable system does not authenticate currently, this
-step and the previous one should be updated as the system evolves.
+Enter a valid set of credentials for an LSST user with LSP access on the
+instance under test.
 
 \medskip }
 \end{minipage}
@@ -1227,7 +1227,7 @@ step and the previous one should be updated as the system evolves.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-No-op.
+The Portal Aspect UI should be displayed following authentication.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2252,7 +2252,8 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Delegate to AP and DRP
+Identify a dataset that has been (or can be readily) processed through
+single-frame processing and coaddition.
 
 \medskip }
 \end{minipage}
@@ -2261,6 +2262,142 @@ Delegate to AP and DRP
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The `calexp` and `deepCoadd\_calexp` images and their associated source
+catalogs are created.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Roughly determine the coordinates of a bounding box that is contained
+within the images that were processed.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+RA, Dec boundaries of a region in which to generate fake sources.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Generate a catalog in the correct format for `insertFakes` to accept.
+The catalog should specify positions and magnitudes of stars (and
+optionally, parameters specifying galaxy shape, if galaxies are also
+being inserted).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An input catalog of fake source positions and magnitudes to be inserted
+into the images.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `insertFakes.py` on the repository, specifying the input catalog
+from the previous step.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A repository with images that have fake sources inserted.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run `multiBandDriver.py` on the repository, specifying the fake-source
+repository as the input.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+`calexp` and coadd images containing the artificial sources and sources
+catalogs that contain their measurements along with the sources detected
+in the original run.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the injected sources appear in the images and the catalogs.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Fake sources and their measured properties are recoverable.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2464,7 +2601,9 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Delegate to AP and DRP
+Identify a repository containing data that have been processed through
+the difference imaging pipeline. (e.g., the HiTS 2015 data that are
+processed monthly for testing)
 
 \medskip }
 \end{minipage}
@@ -2473,6 +2612,100 @@ Delegate to AP and DRP
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset containing calexps, difference images, and source catalogs (of
+diaSrcs).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Extract a `calexp`, a `deepDiff\_differenceExp`, and the
+`deepDiff\_diaSrc` catalog of measurements.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Well-formed images and catalogs containing the calexp from the visit
+image and the difference image, and measurements of sources from the
+difference image.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm (by visual inspection) that the difference image is mostly blank
+sky (i.e., has had a template of the same field subtracted), and that
+the source catalog contains sources with photometric and astrometric
+measurements.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A mostly blank image (with perhaps some artifacts due to imperfect
+subtraction) and a catalog of sources detected/measured from that image.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2513,7 +2746,7 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Delegate to Alert Production
+Identify a dataset with processed visit images in multiple filters.
 
 \medskip }
 \end{minipage}
@@ -2522,6 +2755,96 @@ Delegate to Alert Production
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Extract the photometric zeropoint from the source catalog associated
+with a visit image. Repeat this for all available filters, and confirm
+that the zeropoint has been set, and has a reasonable value.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A zeropoint that enables one to convert the measured fluxes to
+magnitudes.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Extract fluxes for some sources, and convert them to magnitudes. Confirm
+that the distribution spans a reasonable range.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In most cases, well-measured magnitudes (i.e., for high S/N
+measurements) should be between 12 to 28 for all bands.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
