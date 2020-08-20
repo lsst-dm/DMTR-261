@@ -194,7 +194,23 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -235,14 +251,6 @@ Jeffrey Carlin }
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
 & {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
-& {\small Colin Slater } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -331,14 +339,6 @@ Jeffrey Carlin }
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
 & {\small Jim Bosch } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
-& {\small Colin Slater } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -440,10 +440,35 @@ container.
 \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container. The results of this test are contained in a Jupyter notebook
+named `test\_LVV-T40\_T1240.ipynb'.
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/
+\medskip
+\end{minipage}
+&
+\\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/nb. Results appear in Jupyter
+notebook test\_LVV-T151.ipynb.
 \medskip
 \end{minipage}
 &
@@ -489,16 +514,6 @@ container.
 &
 \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -609,16 +624,6 @@ container.
 &
 \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -1191,9 +1196,11 @@ the bounds of the image.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container. The results of this test are contained in a Jupyter notebook
+named `test\_LVV-T40\_T1240.ipynb'.
 
 
 Detailed steps results:
@@ -1220,11 +1227,13 @@ A dataset with Processed Visit Images available.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We used the output repo from HSC-RC2 data processing, as executed using
+v20\_0\_0 of the science pipelines.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1255,11 +1264,14 @@ Butler repo available for reading.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The repository is tagged with ticket number DM-25349, and is located at
+this path on lsst-dev:
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1282,11 +1294,14 @@ that catalog.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+In practice, we iterated this process, randomly selecting 1000 visits
+and extracting the `src` catalog and the WCS associated with the
+`calexp` for each one.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1310,11 +1325,21 @@ used in determining the WCS solution.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This is captured by the ``hasWcs'' method on the `calexp`. We extract
+this for all of the 1000 random visits.\\[2\baselineskip]if
+butler.datasetExists('calexp', dataId = dataref):\\
+calexp = butler.get('calexp', dataId = dataref)\\
+haswcs\_flags.append(butler.get('calexp', dataId =
+dataref).hasWcs())\\[2\baselineskip]Result of the test:\\
+
+\begin{verbatim}
+Percentage of fields with > astrometricMinStandards=5:  100.0 %  --  True
+\end{verbatim}
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1336,11 +1361,19 @@ A list of RA, Dec coordinates for all sources in the catalog.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This was done using the following code:\\[2\baselineskip]\# Start from
+XY, then use the WCS to convert to RA, Dec:\\
+xxx = src.getX()\\
+yyy = src.getY()\\
+radec = {[}wcs.pixelToSky(xxx{[}i{]}, yyy{[}i{]}) for i in
+range(len(xxx)){]}\\
+radec\_arr = np.array({[}(coo.getRa().asDegrees(),
+coo.getDec().asDegrees()) for coo in radec{]})
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 6 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1364,11 +1397,31 @@ Gaia DR2.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Used astroquery to extract Gaia sources, then Astropy utilities to match
+the catalogs:\\[2\baselineskip]gaia\_mch =
+Gaia.query\_object\_async(coordinate=cen, width=width, height=height)\\
+sc\_src = SkyCoord(radec\_arr{[}:,0{]}*u.deg,
+radec\_arr{[}:,1{]}*u.deg)\\
+sc\_gaia = SkyCoord(gaia\_mch{[}'ra'{]}, gaia\_mch{[}'dec'{]})\\
+src\_match = sc\_src.match\_to\_catalog\_sky(sc\_gaia)\\
+sep\_match = src\_match{[}1{]}\\[2\baselineskip]Filtered the matched
+catalog to keep only matches with \textless{}0.5'' separation and with
+magnitude difference \textless{} 1.0 (relative to the median magnitude
+difference of all sources, to account for different filters):\\
+okmch = (sep\_match.arcsec \textless{} 0.5)\\
+matchsep = sep\_match{[}okmch{]}\\[2\baselineskip]\# Require the matches
+to have similar magnitudes:\\
+gaia\_gmag = gaia\_mch{[}'phot\_g\_mean\_mag'{]}\\
+magdiff =
+src\_mag{[}okmch{]}{[}:,0{]}-gaia\_gmag{[}src\_match{[}0{]}{[}okmch{]}{]}\\
+okmagdiff = (np.abs(magdiff - np.median(magdiff)) \textless{} 1.0)\\
+okmatchsep = matchsep{[}okmagdiff{]}\\[2\baselineskip]This yields the
+final matched list.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 7 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1393,11 +1446,35 @@ transformation is accurate.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We retained only CCDs with \textgreater{}10 matches to Gaia sources.
+Rather than histograms, we used comparisons of the various extracted
+parameters. Figures are shown in the notebook
+(`test\_LVV-T40\_T1240.ipynb`).\\[2\baselineskip]In addition to figures,
+we calculated the percentage of images that satisfied the requirement on
+\textbf{astrometricAccuracy}. This was slightly less than 100\% in all
+trials, likely due to some deep (or problematic) images having few Gaia
+matches. The results printed in the notebook are as
+follows:\\[2\baselineskip]
+
+\begin{verbatim}
+Percentage of fields meeting the threshold:  98.7551867219917 %  --  False
+\end{verbatim}
+
+Because a small fraction of fields do not meet the criterion, the test
+for LVV-T40 technically does not pass. Given that \textasciitilde{}98\%
+of the selected CCDs met the astrometric accuracy criterion, and that
+the small number not passing may be due to a lack of Gaia reference
+catalog objects, or data quality issues with the input images (i.e.,
+\emph{not} due to a deficiency in DM algorithms), we consider the result
+of this test \textbf{``Pass.''} However, we recommend that the required
+fraction of images meeting the astrometric accuracy criterion should be
+clarified, and that the data quality selection needed to test this
+requirement should be better defined.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 8 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1419,11 +1496,611 @@ accuracy criterion is met at all positions.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This is implicit in the random selection of 1000 CCDs in the analysis.
+By its nature, the process samples a variety of subregions in the focal
+plane.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1232 - Verify Implementation of Catalog Export Formats From the Portal Aspect }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{\textit{ LVV-T1232 } }
+test case in Jira.
+
+Verify that catalog data is exportable from the portal aspect in a
+variety of community-standard formats.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Navigate to the Portal Aspect endpoint. ~The stable version should be
+used for this test and is currently located at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/ .
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A credential-entry screen should be displayed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+While logged into the NCSA VPN, two-factor authentication credentials
+were entered at the prompts.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter a valid set of credentials for an LSST user with LSP access on the
+instance under test.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The Portal Aspect UI should be displayed following authentication.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Splash page of Portal Aspect displayed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select query type ``ADQL''.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Selected via the ``ADQL'' button on the Portal splash page, which
+brought up a box in which to type queries.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute the example query given in the example code below by entering
+the text in the ADQL Query box, then clicking ``Search'' at the lower
+left corner of the page.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+SELECT cntr, ra, decl, w1mpro\_ep, w2mpro\_ep, w3mpro\_ep FROM
+wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS', ra, decl),
+CIRCLE('ICRS', 192.85, 27.13, .2)) = 1
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A new page will load with the search results as a table, with some plots
+as well.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Query executed quickly, and returned a table with 50000 results.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Click the icon that looks like a floppy disk (it says ``Save the content
+as an IPAC, CSV, or TSV table'' when you mouse over it).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Save menu pops up with options.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  Select ``CSV'', then specify a destination to save the file on your
+  local computer.
+\item
+  Select ``VOTable'', then specify a destination to save the file on
+  your local computer.
+\item
+  Select ``FITS'', then specify a destination to save the file on your
+  local computer.
+\end{itemize}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Files are present on disk:\\[2\baselineskip]\$ ls -ltrh\\
+total 20232\\
+-rw-r--r--@ 1 jcarlin~~staff ~~3.7M Aug 19 16:31 LVV-T1232\_test.csv\\
+-rw-r--r--@ 1 jcarlin~~staff ~~3.1M Aug 19 16:33
+LVV-T1232\_test\_vot.xml\\
+-rw-r--r--@ 1 jcarlin staff 3.1M Aug 19 16:33 LVV-T1232\_test.fits
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Open each of the files (either in TOPCAT, or using Astropy io tools).
+Confirm that the data tables are well-formed, and that each table
+contains the same columns and the same number of rows.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Each file was opened in TOPCAT, and it was confirmed that each of them
+contains the same 6 columns and 50000 rows.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Currently, there is no logout mechanism on the portal.\\
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Closed browser window. ~When navigating to the portal endpoint, expect
+to execute the steps in LVV-T849.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Exited the Portal Aspect and closed the browser window.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T151 - Verify Implementation of Catalog Export Formats From the Notebook Aspect }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{\textit{ LVV-T151 } }
+test case in Jira.
+
+Verify that catalog data is exportable from the notebook aspect in a
+variety of community-standard formats.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/nb. Results appear in Jupyter
+notebook test\_LVV-T151.ipynb.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+While logged into the NCSA VPN, two-factor authentication credentials
+were entered at the prompts. Notebook Aspect authentication credentials
+were entered at the prompt.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click ``Spawn''
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+For this test, we use Release v20.0.0, with a Large container. The
+JupyterLab environment is presented.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A launcher window with several sections, potentially with several kernel
+versions for each.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A launcher appeared with ``Python 3'' and ``LSST'' options under
+``Notebook'' and ``Console'', and various options in the ``Other''
+category.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
+icon.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An empty notebook with a single empty cell. ~The kernel show up as
+``LSST'' in the top right of the notebook.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Notebook was displayed. We renamed the notebook
+``test\_LVV-T151.ipynb''.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute a query in a notebook to select a small number of stars. In the
+example code below, we query the WISE catalog, then extract the results
+to an Astropy table.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import pandas
+import pyvo
+service = pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')
+\end{verbatim}
+
+results = service.search(``SELECT ra, decl, w1mpro\_ep, w2mpro\_ep,
+w3mpro\_ep FROM wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS',
+ra, decl), CIRCLE('ICRS', 192.85, 27.13, .2)) = 1'')\\
+tab = results.to\_table()
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The Notebook Aspect has some tools implemented that execute queries
+using `pyvo', so we use those instead of directly accessing the
+TAPService with pyvo as follows:\\[2\baselineskip]import pandas\\
+from jupyterlabutils.notebook import get\_catalog,
+retrieve\_query\\[2\baselineskip]pandas.set\_option('display.max\_rows',
+1000)\\
+service = get\_catalog()\\[2\baselineskip]results =
+service.search(``SELECT ra, decl, w1mpro\_ep, w2mpro\_ep, w3mpro\_ep
+FROM wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS', ra, decl),
+CIRCLE('ICRS', 192.85, 27.13, .2)) = 1'')\\
+tab = results.to\_table()\\[2\baselineskip]This returns a table with
+97058 entries.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Using the example code below, save the files to your storage space on
+the LSP Notebook Aspect.\\[2\baselineskip]Confirm that non-empty output
+files appear on disk.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+tab.write('test.csv', format='ascii.csv')\\
+tab.write('test.vot', format='votable')\\
+tab.write('test.fits', format='fits')
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+For the example given here, there should be the following files with the
+file size as listed:
+
+\begin{itemize}
+\tightlist
+\item
+  test.csv 5.7M
+\item
+  test.vot 16M
+\item
+  test.fits 4.5M
+\end{itemize}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The files appear on disk. Note, however, that the predicted file sizes
+listed above are not what resulted. Here are the results from a command
+line:\\[2\baselineskip]\$ ls -ltrh test.*\\
+-rw-r--r-- 1 jcarlin 3.8M Aug 20 00:37 test.csv\\
+-rw-r--r-- 1 jcarlin 13M Aug 20 00:37 test.vot\\
+-rw-r--r-- 1 jcarlin 3.8M Aug 20 00:37 test.fits
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Check that these files contain the same number of rows:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+from astropy.table import Table\\
+dat\_csv = Table.read('test.csv', format='ascii.csv')\\
+dat\_vot = Table.read('test.vot', format='votable')\\
+dat\_fits = Table.read('test.fits',
+format='fits')\\[2\baselineskip]import numpy as np\\
+print(np.size(dat\_csv), np.size(dat\_vot), np.size(dat\_fits))
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Print statement produces output ``97058 97058 97058''.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+Executing the above code yields the following output:
+97058 97058 97058
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Under the `File' menu at the top of your Jupyter notebook session,
+select one of the following:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  Save All, Exit, and Log Out
+\item
+  Exit and Log Out Without Saving
+\end{itemize}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+You will be returned to the LSP landing page:
+\url{https://lsst-lsp-stable.ncsa.illinois.edu/} It is now safe to close
+the browser window.~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Logged out, exited the Notebook Aspect, and closed the browser window.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -1878,257 +2555,6 @@ and record execution time.
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
 Query runs in less than 10 seconds.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1232 - Verify Implementation of Catalog Export Formats From the Portal Aspect }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{\textit{ LVV-T1232 } }
-test case in Jira.
-
-Verify that catalog data is exportable from the portal aspect in a
-variety of community-standard formats.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Navigate to the Portal Aspect endpoint. ~The stable version should be
-used for this test and is currently located at:
-https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/ .
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A credential-entry screen should be displayed.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Enter a valid set of credentials for an LSST user with LSP access on the
-instance under test.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-The Portal Aspect UI should be displayed following authentication.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Select query type ``ADQL''.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute the example query given in the example code below by entering
-the text in the ADQL Query box, then clicking ``Search'' at the lower
-left corner of the page.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-SELECT cntr, ra, decl, w1mpro\_ep, w2mpro\_ep, w3mpro\_ep FROM
-wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS', ra, decl),
-CIRCLE('ICRS', 192.85, 27.13, .2)) = 1
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A new page will load with the search results as a table, with some plots
-as well.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Click the icon that looks like a floppy disk (it says ``Save the content
-as an IPAC, CSV, or TSV table'' when you mouse over it).
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Select ``CSV'', then specify a destination to save the file on your
-  local computer.
-\item
-  Select ``VOTable'', then specify a destination to save the file on
-  your local computer.
-\item
-  Select ``FITS'', then specify a destination to save the file on your
-  local computer.
-\end{itemize}
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-7 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Open each of the files (either in TOPCAT, or using Astropy io tools).
-Confirm that the data tables are well-formed, and that each table
-contains the same columns and the same number of rows.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-8 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\[2\baselineskip]Simply
-close the browser window.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Closed browser window. ~When navigating to the portal endpoint, expect
-to execute the steps in LVV-T849.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3736,300 +4162,6 @@ processing).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T151 - Verify Implementation of Catalog Export Formats From the Notebook Aspect }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{\textit{ LVV-T151 } }
-test case in Jira.
-
-Verify that catalog data is exportable from the notebook aspect in a
-variety of community-standard formats.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Authenticate to the notebook aspect of the LSST Science Platform
-(NB-LSP). ~This is currently at
-https://lsst-lsp-stable.ncsa.illinois.edu/nb.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Redirection to the spawner page of the NB-LSP allowing selection of the
-containerized stack version and machine flavor.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Spawn a container by:\\
-1) choosing an appropriate stack version: e.g. the latest weekly.\\
-2) choosing an appropriate machine flavor: e.g. medium\\
-3) click ``Spawn''
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Redirection to the JupyterLab environment served from the chosen
-container containing the correct stack version.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Open a new launcher by navigating in the top menu bar ``File''
--\textgreater{} ``New Launcher''
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A launcher window with several sections, potentially with several kernel
-versions for each.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
-icon.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-An empty notebook with a single empty cell. ~The kernel show up as
-``LSST'' in the top right of the notebook.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute a query in a notebook to select a small number of stars. In the
-example code below, we query the WISE catalog, then extract the results
-to an Astropy table.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import pandas
-import pyvo
-service = pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')
-\end{verbatim}
-
-results = service.search(``SELECT ra, decl, w1mpro\_ep, w2mpro\_ep,
-w3mpro\_ep FROM wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS',
-ra, decl), CIRCLE('ICRS', 192.85, 27.13, .2)) = 1'')\\
-tab = results.to\_table()
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Using the example code below, save the files to your storage space on
-the LSP Notebook Aspect.\\[2\baselineskip]Confirm that non-empty output
-files appear on disk.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-tab.write('test.csv', format='ascii.csv')\\
-tab.write('test.vot', format='votable')\\
-tab.write('test.fits', format='fits')
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-For the example given here, there should be the following files with the
-file size as listed:
-
-\begin{itemize}
-\tightlist
-\item
-  test.csv 5.7M
-\item
-  test.vot 16M
-\item
-  test.fits 4.5M
-\end{itemize}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-7 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Check that these files contain the same number of rows:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-from astropy.table import Table\\
-dat\_csv = Table.read('test.csv', format='ascii.csv')\\
-dat\_vot = Table.read('test.vot', format='votable')\\
-dat\_fits = Table.read('test.fits',
-format='fits')\\[2\baselineskip]import numpy as np\\
-print(np.size(dat\_csv), np.size(dat\_vot), np.size(dat\_fits))
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Print statement produces output ``97058 97058 97058''.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-8 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Under the `File' menu at the top of your Jupyter notebook session,
-select one of the following:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  Save All, Exit, and Log Out
-\item
-  Exit and Log Out Without Saving
-\end{itemize}
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-You will be returned to the LSP landing page:
-\url{https://lsst-lsp-stable.ncsa.illinois.edu/} It is now safe to close
-the browser window.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
