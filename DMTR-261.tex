@@ -213,7 +213,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -465,7 +465,7 @@ notebook test\_LVV-T151.ipynb.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -2094,7 +2094,7 @@ plane.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -2123,11 +2123,16 @@ containing the CBP package: \url{https://github.com/lsst/cbp}
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Working in a terminal on the command line logged into
+\emph{lsst-devl02}. With the Rubin Obs/LSST stack set up:\\
+Make the directory: /project/jcarlin/cbp, and change to that directory.
+Then:\\
+git clone https://github.com/lsst/cbp.git
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2147,11 +2152,19 @@ Follow the steps in the package README to install the package.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+To make the package available to use, simply execute the following:\\
+cd cbp/\\
+git checkout 20.0.0 \#\#\# This step is to ensure that we are using the
+correct tagged version.\\
+setup -r .\\[2\baselineskip]Execute the setup of `lsst\_distrib` again
+to ensure that the correct version (v20.0.0) of the pipelines is
+loaded.\\
+setup -t v20\_0\_0 lsst\_distrib\\[2\baselineskip]
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2174,11 +2187,98 @@ of beam projector coordinates.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+From the command line, launch ipython and confirm that the package can
+be loaded:\\[2\baselineskip]ipython\\
+In {[}\textbf{1}{]}: \textbf{import}
+\textbf{lsst.cbp}\\[2\baselineskip]In {[}\textbf{2}{]}: dir(lsst.cbp)\\
+Out{[}\textbf{2}{]}:\\
+{[}'BeamInfo',\\
+`CoordinateConverter',\\
+`CoordinateConverterConfig',\\
+`MaskInfo',\\
+`\_\_builtins\_\_',\\
+`\_\_cached\_\_',\\
+`\_\_dependency\_versions\_\_',\\
+`\_\_doc\_\_',\\
+`\_\_file\_\_',\\
+`\_\_fingerprint\_\_',\\
+`\_\_loader\_\_',\\
+`\_\_name\_\_',\\
+`\_\_package\_\_',\\
+`\_\_path\_\_',\\
+`\_\_repo\_version\_\_',\\
+`\_\_spec\_\_',\\
+`\_\_version\_\_',\\
+`\_\_version\_info\_\_',\\
+`beamInfo',\\
+`computeHolePositions',\\
+`coordUtils',\\
+`coordinateConverter',\\
+`coordinateConverterConfig',\\
+`maskInfo',\\
+`version'{]}\\[2\baselineskip]This was successful. The package loads,
+and we can introspect its methods via the `dir`
+command.\\[2\baselineskip]Now confirm that the tests can be executed. We
+will cycle through them one by one, confirming that the unit tests (a)
+execute, and (b) pass with status ``OK.''\\[2\baselineskip]\emph{python
+test\_computeHolePositions.py\\
+}\ldots{}.\\
+----------------------------------------------------------------------\\
+Ran 4 tests in 0.059s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordinateConverterConfig.py\\
+}\ldots{}..\\
+----------------------------------------------------------------------\\
+Ran 5 tests in 0.011s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordinateConverter.py\\
+}\ldots{}\\
+root finder mean error=2.9e-13, sdev=7.14e-13, min=4.44e-16,
+max=8.14e-12\\
+.\\
+root finder mean error=1.28e-12, sdev=1.31e-12, min=5.33e-15,
+max=5.25e-12\\
+.\\
+root finder mean error=3.26e-13, sdev=6.54e-13, min=8.88e-16,
+max=3.6e-12\\
+\ldots{}\\
+root finder mean error=2.46e-14, sdev=4.66e-15, min=2e-14,
+max=2.93e-14\\
+.\\
+Warning: recorded 14 numerical errors in computeAzAltFromBasePupil; the
+worst 5 are:\\
+error=0.00002 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 1.12925789e-06 5.50453669e+03{]}\\
+error=0.00003 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 1.57600502e-06 5.50453669e+03{]}\\
+error=0.00006 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.15616213e+04 1.48783336e-04 5.73509069e+02{]}\\
+error=0.00049 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 2.76831443e-05 5.50453669e+03{]}\\
+error=0.00071 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 4.00557155e-05
+5.50453669e+03{]}\\[2\baselineskip]root finder mean error=5.7e-13,
+sdev=1.22e-12, min=8.88e-16, max=5.89e-12\\
+.\\
+root finder mean error=6.24e-13, sdev=1.36e-12, min=4.44e-16,
+max=5.58e-12\\
+.\\
+root finder mean error=1.64e-14, sdev=0, min=1.64e-14, max=1.64e-14\\
+\ldots{}\ldots{}\\
+----------------------------------------------------------------------\\
+Ran 17 tests in
+13.632s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordUtils.py\\
+}\ldots{}\ldots{}\ldots{}\ldots{}\\
+----------------------------------------------------------------------\\
+Ran 12 tests in 0.123s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_maskInfo.py\\
+}\ldots{}.\\
+----------------------------------------------------------------------\\
+Ran 4 tests in 0.015s\\[2\baselineskip]OK
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
