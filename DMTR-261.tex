@@ -220,40 +220,8 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-& {\small Colin Slater } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -261,7 +229,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -269,7 +237,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -277,7 +245,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -472,75 +440,61 @@ notebook test\_LVV-T151.ipynb.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
 &  1
-& Not Executed &
+& Initial Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
 &  1
-& Not Executed &
+& Initial Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -2282,368 +2236,6 @@ Ran 4 tests in 0.015s\\[2\baselineskip]OK
 
 \end{longtable}
 
-\paragraph{ LVV-T149 - Verify implementation of Catalog Queries }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{\textit{ LVV-T149 } }
-test case in Jira.
-
-Verify that SQL, or a similar structured language, can be used to query
-catalogs.
-
-\textbf{ Preconditions}:\\
-An operational QSERV database that has been verified via
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1085}{LVV-T1085}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1086}{LVV-T1086}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1087}{LVV-T1087}.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute a simple query (for example, the one below) and confirm that it
-returns the expected result.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-SELECT * FROM Object WHERE qserv\_areaspec\_box(316.582327, −6.839078,
-316.653938, −6.781822)
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A catalog of objects satisfying the specified constraints.~
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Repeat the query from all available access routes (e.g., an external VO
-client, internal DM tools on the development cluster, the Science
-Platform query tool, and from within the Notebook Aspect), confirming in
-each case that the results are as expected.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1087 - Full Table Joins Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{\textit{ LVV-T1087 } }
-test case in Jira.
-
-The objective of this test is to ensure that the full table join queries
-are performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
-s.objectId, s.id, o.ra, o.decl\\
-\textbf{~ ~ FROM} Object o, Source s WHERE o.deepSourceId=s.objectId\\
-\hspace*{0.333em} ~ \textbf{AND} s . flux\_sinc \textbf{BETWEEN} 0.3
-\textbf{AND} 0.31\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
-f.psfFlux \textbf{FROM} Object o, ForcedSource f\\
-\textbf{~ ~ WHERE} o.deepSourceId=f.deepSourceId\\
-\textbf{~ ~ AND} f . psfFlux \textbf{BETWEEN} 0.13 \textbf{AND}
-0.14\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1086 - Full Table Scans Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{\textit{ LVV-T1086 } }
-test case in Jira.
-
-The objective of this test is to ensure that the full table scan queries
-are performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} ra , decl , u\_psfFlux ,
-g\_psfFlux , r\_psfFlux \textbf{FROM} Object\\
-\textbf{WHERE} y\_shapeIxx \textbf{BETWEEN} 20 \textbf{AND}
-20.1\\[3\baselineskip]and record execution time and output size.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 1 hour.\\[2\baselineskip]
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
-Source \textbf{WHERE} flux\_sinc \textbf{BETWEEN} 1 \textbf{AND}
-1.1\\[2\baselineskip]and record the execution time
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
-ForcedSource \textbf{WHERE} psfFlux \textbf{BETWEEN} 0.1 \textbf{AND}
-0.2\\[2\baselineskip]and record the execution time
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1085 - Short Queries Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{\textit{ LVV-T1085 } }
-test case in Jira.
-
-The objective of this test is to ensure that the short queries are
-performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute single object selection:\\[2\baselineskip]\textbf{SELECT} *
-\textbf{FROM} Object~\textbf{WHERE} deepSourceId =
-9292041530376264\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query runs in less than 10 seconds.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute spatial area selection from
-Object:\\[2\baselineskip]\textbf{SELECT COUNT(*)} \textbf{FROM} Object
-\textbf{WHERE}~\\
-
-~qserv\_areaspec\_box(316.582327, −6.839078, 316.653938, −6.781822)
-
-and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query runs in less than 10 seconds.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
 \paragraph{ LVV-T1759 - Verify calculation of photometric outliers in gri bands }\mbox{}\\
 
 Version \textbf{1}.
@@ -2659,9 +2251,13 @@ of \textbf{PA2gri = 15 millimagnitudes}.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
 
 
 Detailed steps results:
@@ -2689,11 +2285,15 @@ A dataset that has been ingested into a Butler repository.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2742,11 +2342,14 @@ eups list -s
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2776,11 +2379,23 @@ associated ``extras.''
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+An example of the call to execute `matchedVisitMetrics` (which runs the
+metrics portion of `validate\_drp` on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-G
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=11690\^{}11692\^{}11694\^{}11696\^{}11698\^{}11700\^{}11702\^{}11704\^{}11706\^{}11708\^{}11710\^{}11712\^{}29324\^{}29326\^{}29336\^{}29340\^{}29350
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2803,11 +2418,38 @@ demonstrating that PA2gri has been calculated (and that it used PF1).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-G-251998.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]
+
+\begin{tabular}[]{@{}lllll@{}}
+\toprule
+\textbf{Metric\\
+} & \textbf{Filter\\
+} & \textbf{Unit\\
+} & \textbf{Operator+SRD Requirement\\
+} & \textbf{Value}\tabularnewline
+PA2 & HSC-G & mmag & \textless{}= 15.0 & 28.8\tabularnewline
+PF1 & HSC-G & \% & \textless{}= 10.0 & 30.2\tabularnewline
+PA2 & HSC-I & mmag & \textless{}= 15.0 & 32.6\tabularnewline
+PF1 & HSC-I & \% & \textless{}= 10.0 & 34.6\tabularnewline
+PA2 & HSC-R & mmag & \textless{}= 15.0 & 33.4\tabularnewline
+PF1 & HSC-R & \% & \textless{}= 10.0 & 34.4\tabularnewline
+\bottomrule
+\end{tabular}\\[\baselineskip]
+
+Note that because the science pipelines are still in development, the
+actual resulting values for these metrics are not important. The
+requirement to be satisfied is that we have (a) provided the software to
+calculate them, and (b) provided a framework for comparing them to
+requirements. These are both satisfied.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -2826,9 +2468,16 @@ of \textbf{PA2uzy = 22.5 millimagnitudes}.~
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Initial Pass }
 
-Final comment:\\
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
 
 
 Detailed steps results:
@@ -2856,11 +2505,15 @@ A dataset that has been ingested into a Butler repository.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2909,11 +2562,14 @@ eups list -s
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2943,11 +2599,23 @@ associated ``extras.''
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+An example of the call to execute `matchedVisitMetrics` (which runs the
+metrics portion of `validate\_drp` on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-Y
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=318\^{}322\^{}324\^{}326\^{}328\^{}330\^{}332\^{}344\^{}346\^{}348\^{}350\^{}352\^{}354\^{}356\^{}358\^{}360\^{}362\^{}1868\^{}1870\^{}1872\^{}1874\^{}1876\^{}1880\^{}1882\^{}11718\^{}11720\^{}11722\^{}11724\^{}11726\^{}11728\^{}11730\^{}11732\^{}11734\^{}11736\^{}11738\^{}11740\^{}22602\^{}22604\^{}22606\^{}22608\^{}22626\^{}22628\^{}22630\^{}22632\^{}22642\^{}22644\^{}22646\^{}22648\^{}22658\^{}22660\^{}22662\^{}22664
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -2970,11 +2638,39 @@ demonstrating that PA2uzy has been calculated (and that it used PF1).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-Y-252002.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]
+
+\begin{tabular}[]{@{}lllll@{}}
+\toprule
+\textbf{Metric\\
+} & \textbf{Filter\\
+} & \textbf{Unit\\
+} & \textbf{Operator+SRD Requirement\\
+} & \textbf{Value}\tabularnewline
+PA2 & HSC-Y & mmag & \textless{}= 22.5 & 34.2\tabularnewline
+PF1 & HSC-Y & \% & \textless{}= 10.0 & 20.5\tabularnewline
+PA2 & HSC-Z & mmag & \textless{}= 22.5 & 27.4\tabularnewline
+PF1 & HSC-Z & \% & \textless{}= 10.0 & 15.6\tabularnewline
+\bottomrule
+\end{tabular}\\[\baselineskip]
+
+Note that because the science pipelines are still in development, the
+actual resulting values for these metrics are not important. The
+requirement to be satisfied is that we have (a) provided the software to
+calculate them, and (b) provided a framework for comparing them to
+requirements. These are both satisfied.\\[2\baselineskip]This step is
+given a status of ``Initial Pass'' because there are no u-band data to
+test on. We have demonstrated that the capability is provided, but
+simply do not have data to pass through the code.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Initial Pass } \\ \hline
 
 \end{longtable}
 
@@ -2993,9 +2689,16 @@ millimagnitudes}.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Initial Pass }
 
-Final comment:\\
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
 
 
 Detailed steps results:
@@ -3023,11 +2726,15 @@ A dataset that has been ingested into a Butler repository.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3057,11 +2764,26 @@ associated ``extras.''
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru\\[2\baselineskip]An example of the call to execute
+`matchedVisitMetrics` (which runs the metrics portion of `validate\_drp`
+on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-Y
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=318\^{}322\^{}324\^{}326\^{}328\^{}330\^{}332\^{}344\^{}346\^{}348\^{}350\^{}352\^{}354\^{}356\^{}358\^{}360\^{}362\^{}1868\^{}1870\^{}1872\^{}1874\^{}1876\^{}1880\^{}1882\^{}11718\^{}11720\^{}11722\^{}11724\^{}11726\^{}11728\^{}11730\^{}11732\^{}11734\^{}11736\^{}11738\^{}11740\^{}22602\^{}22604\^{}22606\^{}22608\^{}22626\^{}22628\^{}22630\^{}22632\^{}22642\^{}22644\^{}22646\^{}22648\^{}22658\^{}22660\^{}22662\^{}22664
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3084,11 +2806,37 @@ demonstrating that PA1uzy has been calculated.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-Y-252002.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]
+
+\begin{tabular}[]{@{}lllll@{}}
+\toprule
+\textbf{Metric\\
+} & \textbf{Filter\\
+} & \textbf{Unit\\
+} & \textbf{Operator+SRD Requirement\\
+} & \textbf{Value}\tabularnewline
+PA1 & HSC-Y & mmag & \textless{}= 7.5 & 15.5\tabularnewline
+PA1 & HSC-Z & mmag & \textless{}= 7.5 & 12.9\tabularnewline
+\bottomrule
+\end{tabular}\\[\baselineskip]
+
+Note that because the science pipelines are still in development, the
+actual resulting values for these metrics are not important. The
+requirement to be satisfied is that we have (a) provided the software to
+calculate them, and (b) provided a framework for comparing them to
+requirements. These are both satisfied.\\[2\baselineskip]This step is
+given a status of ``Initial Pass'' because there are no u-band data to
+test on. We have demonstrated that the capability is provided, but
+simply do not have data to pass through the code.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Initial Pass } \\ \hline
 
 \end{longtable}
 
@@ -3107,9 +2855,13 @@ millimagnitudes}.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
 
 
 Detailed steps results:
@@ -3137,11 +2889,15 @@ A dataset that has been ingested into a Butler repository.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3171,11 +2927,26 @@ associated ``extras.''
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru\\[2\baselineskip]An example of the call to execute
+`matchedVisitMetrics` (which runs the metrics portion of `validate\_drp`
+on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-G
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=11690\^{}11692\^{}11694\^{}11696\^{}11698\^{}11700\^{}11702\^{}11704\^{}11706\^{}11708\^{}11710\^{}11712\^{}29324\^{}29326\^{}29336\^{}29340\^{}29350
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3198,11 +2969,35 @@ demonstrating that PA1gri has been calculated.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-G-251998.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]
+
+\begin{tabular}[]{@{}lllll@{}}
+\toprule
+\textbf{Metric\\
+} & \textbf{Filter\\
+} & \textbf{Unit\\
+} & \textbf{Operator+SRD Requirement\\
+} & \textbf{Value}\tabularnewline
+PA1 & HSC-G & mmag & \textless{}= 5.0 & 13.5\tabularnewline
+PA1 & HSC-I & mmag & \textless{}= 5.0 & 14.9\tabularnewline
+PA1 & HSC-R & mmag & \textless{}= 5.0 & 15.5\tabularnewline
+\bottomrule
+\end{tabular}\\[\baselineskip]
+
+Note that because the science pipelines are still in development, the
+actual resulting values for these metrics are not important. The
+requirement to be satisfied is that we have (a) provided the software to
+calculate them, and (b) provided a framework for comparing them to
+requirements. These are both satisfied.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
