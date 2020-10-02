@@ -268,14 +268,6 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
 & {\small Jim Bosch } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -508,15 +500,6 @@ into the new framework.
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -3286,150 +3269,6 @@ and templates for diferent airmass bins.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T126 - Verify implementation of Image Differencing }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{\textit{ LVV-T126 } }
-test case in Jira.
-
-Verify that the DMS can performance image differencing from single
-exposures and coadds.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a repository containing data that have been processed through
-the difference imaging pipeline. (e.g., the HiTS 2015 data that are
-processed monthly for testing)
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset containing calexps, difference images, and source catalogs (of
-diaSrcs).
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Extract a `calexp`, a `deepDiff\_differenceExp`, and the
-`deepDiff\_diaSrc` catalog of measurements.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Well-formed images and catalogs containing the calexp from the visit
-image and the difference image, and measurements of sources from the
-difference image.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm (by visual inspection) that the difference image is mostly blank
-sky (i.e., has had a template of the same field subtracted), and that
-the source catalog contains sources with photometric and astrometric
-measurements.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A mostly blank image (with perhaps some artifacts due to imperfect
-subtraction) and a catalog of sources detected/measured from that image.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
