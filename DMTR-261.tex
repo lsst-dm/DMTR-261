@@ -261,7 +261,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
-& {\small Eric Bellm } & {\small  } &
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -501,7 +501,7 @@ into the new framework.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -3132,7 +3132,7 @@ Verify successful creation of a\\
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -3189,11 +3189,13 @@ eups list -s
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3220,11 +3222,15 @@ DIAObject measurements.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+These tests were executed using processed data from DECam/HiTS and HSC
+PDR2 (the COSMOS field - tract 9813). The processing with the Alert
+Production payload was executed prior to the start of this testing.
+Paths to the data are given in the accompanying Jupyter notebooks.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3245,11 +3251,14 @@ catalogs contain reasonable values for measured quantities of interest.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+See the accompanying notebooks, titled `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`. The expected images and catalogs are
+present, and were inspected to ensure that they are well-formed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3275,11 +3284,15 @@ and templates for diferent airmass bins.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This was done for 11 images from HSC at a range of airmasses, and images
+from DECam HiTS data. The difference exposures were shown to have zero
+mean flux, as expected, and visually inspected to confirm that they are
+well-formed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
