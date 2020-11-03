@@ -253,7 +253,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -269,7 +269,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -492,10 +492,13 @@ into the new framework.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+This test demonstrates that the injected fake sources are visible, and
+that their measured magnitudes match the input values. However, future
+exploration should probably test the same for a variety of artificial
+sources (i.e., including galaxies).
 \medskip
 \end{minipage}
 &   \\\hline
@@ -510,7 +513,7 @@ into the new framework.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -2946,9 +2949,12 @@ testing.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\This test demonstrates that the injected fake sources are visible, and
+that their measured magnitudes match the input values. However, future
+exploration should probably test the same for a variety of artificial
+sources (i.e., including galaxies).
 
 
 Detailed steps results:
@@ -2977,11 +2983,14 @@ catalogs are created.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We executed this test on the regularly reprocessed HSC-RC2 dataset. It
+is now part of routine processing to insert artificial sources into the
+data.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3003,11 +3012,13 @@ RA, Dec boundaries of a region in which to generate fake sources.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted a single patch, and then selected only the fake sources
+within that RA, Dec box.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3032,11 +3043,15 @@ into the images.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This step was performed prior to the test. We did, however, load the
+fakes catalog from the butler repository and examined them
+using:\\[2\baselineskip]fakeSourceCat =
+butler\_mb.get('deepCoadd\_fakeSourceCat', dataId = dataIdCoadd)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3058,11 +3073,13 @@ A repository with images that have fake sources inserted.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We confirmed that the number of sources in the `forced\_src` photometry
+catalog~\emph{including fakes} is larger than the catalog without fakes.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3086,11 +3103,15 @@ in the original run.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+See the associated notebook, test\_LVV-T125.ipynb, which shows
+comparisons of images with and without fake sources, and differences of
+images (to highlight the fake sources that are left after subtracting
+off the original image).
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 6 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3111,11 +3132,14 @@ Fake sources and their measured properties are recoverable.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+By extracting the detected/measured sources that correspond to the input
+fakes, we compared the photometry and confirmed that the magnitudes of
+input fake sources are recovered.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -3309,7 +3333,7 @@ flux on the image to physical flux units.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -3337,11 +3361,19 @@ Identify a dataset with processed visit images in multiple filters.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We will use HSC-RC2 data that was processed with the v20.0 science
+pipelines. The output repo is tagged with the Jira ticket number
+``DM-25349'':\\
+rc2\_repo =
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349-sfm'\\[2\baselineskip]We
+also repeat each test on data from the difference image repo at the
+following path on the `lsst-devl` servers:\\
+diffim\_repo = `/project/mrawls/cosmos/rerun/ap\_pipe-g-202007'
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3372,11 +3404,13 @@ Butler repo available for reading.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+butler = dafPersist.Butler(rc2\_repo)\\[2\baselineskip]The data is
+available for reading.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3400,11 +3434,15 @@ magnitudes.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+In the notebook associated with this test -- `test\_LVV-T39.ipynb` -- we
+extract the zeropoints, fluxes, and magnitudes, and confirm that the
+conversion between fluxes and magnitudes is enabled, and that it
+round-trips succesfully.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3427,11 +3465,14 @@ measurements) should be between 12 to 28 for all bands.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted fluxes for 500 sources at random, and confirmed that
+converting their fluxes to magnitudes yields reasonable values for all
+stars.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
