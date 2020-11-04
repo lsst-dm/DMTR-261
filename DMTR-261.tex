@@ -276,16 +276,8 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
-& {\small Eric Bellm } & {\small  } &
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -293,15 +285,15 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
-& {\small Eric Bellm } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
+& {\small Robert Gruendl } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -332,8 +324,16 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
-& {\small Robert Gruendl } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
+& {\small Eric Bellm } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
+& {\small Eric Bellm } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -520,34 +520,29 @@ sources (i.e., including galaxies).
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -570,7 +565,10 @@ sources (i.e., including galaxies).
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task specification and execution are in active
+development, we will defer this test to a later campaign that takes
+place after Gen3 has stabilized.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -579,16 +577,37 @@ sources (i.e., including galaxies).
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task configuration, specification, and execution
+are in active development, we will defer this test to a later campaign
+that takes place after Gen3 has stabilized.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Data Quality Report
+would be available by the time of this Test Campaign. Because the report
+has not yet been defined, nor the automated pipeline to ingest and
+process data, then generate the report, we defer this test to a later
+campaign.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Performance Report would
+be available by the time of this Test Campaign. Because the report has
+not yet been defined, nor the automated pipeline to ingest and process
+data, then generate the report, we defer this test to a later campaign.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -3476,60 +3495,6 @@ stars.
 
 \end{longtable}
 
-\paragraph{ LVV-T46 - Verify implementation of Prompt Processing Performance Report Definition }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{\textit{ LVV-T46 } }
-test case in Jira.
-
-Verify that the DMS produces a Prompt Processing Performance Report.
-~Specifically check that the number of observations that describe each
-of the following:\\
-1. Successfully processed, recoverable failures, unrecoverable
-failures.\\
-2. Archived\\
-3. Result in science.\\[2\baselineskip]This is testing more the
-processing rather than the observatory system.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute single-day operations rehearsal, observe report
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
 \paragraph{ LVV-T38 - Verify implementation of Processed Visit Images }\mbox{}\\
 
 Version \textbf{1}.
@@ -3544,9 +3509,11 @@ signature has been removed.\\
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
 
 
 Detailed steps results:
@@ -3572,13 +3539,59 @@ Identify suitable precursor datasets containing unprocessed raw images.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.\\[2\baselineskip]These tests were executed using
+processed data from DECam/HiTS. The processing with the Alert Production
+payload was executed prior to the start of this testing. The path to the
+data are given in the accompanying Jupyter notebook entitled
+`test-T38\_42.ipynb`.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The path where Meredith regularly re-runs HiTS data through diff
+imaging:\\
+diffim\_repo =
+`/project/mrawls/hits2015/rerun/cw\_2020\_06'\\[2\baselineskip]butler =
+dafPersist.Butler(diffim\_repo)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
 Run the Prompt Processing payload on these data. ~Verify that Processed
@@ -3600,64 +3613,15 @@ Images, with instrumental artifacts corrected.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+In the associated notebook, we have examined a raw image and a processed
+visit image (also known as a ``calexp'') side-by-side, and confirmed
+that (a) the calexp is well-formed, and that (b) the instrumental
+artifacts have been corrected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run camera test stand data through full acquisition+backbone+ISR.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run simulated LSST data with calibrations through prompt processing
-system and inspect Processed Visit images to verify that they have been
-cleaned of significant artifacts and are of the correct, shape, and
-described orientation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Raw images have been processed into Processed Visit Images, with
-instrumental artifacts corrected.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -3674,9 +3638,11 @@ and a WCS model.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
 
 
 Detailed steps results:
@@ -3713,11 +3679,17 @@ Butler repo available for reading.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.\\[2\baselineskip]These tests were executed using
+processed data from DECam/HiTS. The processing with the Alert Production
+payload was executed prior to the start of this testing. The path to the
+data are given in the accompanying Jupyter notebook entitled
+`test-T38\_42.ipynb`.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3737,11 +3709,16 @@ Ingest the data from an appropriate processed dataset.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The path where Meredith regularly re-runs HiTS data through diff
+imaging:\\
+diffim\_repo =
+`/project/mrawls/hits2015/rerun/cw\_2020\_06'\\[2\baselineskip]butler =
+dafPersist.Butler(diffim\_repo)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3762,11 +3739,13 @@ calexp image, psf model, and source list.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+See the relevant code in the associated notebook. All of these objects
+were selected as ``wcs'', ``calexp.image'', ``psf'', and ``src.''
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3798,11 +3777,14 @@ visualized using Firefly, which displays mask planes by default.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The images of both the calexp and its variance plane are well-formed. We
+confirmed the presence of a mask plane and the meanings of its bit
+values using afwDisplay within the Jupyter notebook.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3826,11 +3808,15 @@ taking a difference of PSFs at two positions).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted an image of the PSF at two random positions and noted that
+they were well-formed. We then took the difference of the two PSFs,
+which showed clear differences between them. We thus confirmed that the
+PSF differs as a function of position.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 6 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3855,11 +3841,14 @@ or the WCS.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This was executed for all sources on a CCD in a processed visit image.
+The XY positions converted to (RA, Dec) were confirmed to match the
+expected position as given by the WCS.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 7 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3881,432 +3870,13 @@ processing).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+These steps were repeated for a difference image. Results of this
+successful test can be seen in the associated notebook.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T45 - Verify implementation of Prompt Processing Data Quality Report
-Definition }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{\textit{ LVV-T45 } }
-test case in Jira.
-
-Verify that the DMS produces a Prompt Processing Data Quality Report.
-~Specifically check absolute value and temporal variation of\\
-1. Photometric zeropoint\\
-2. Sky brightness\\
-3. Seeing\\
-4. PSF\\
-5. Detection efficiency
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Ingest raw data from L1 Test Stand DAQ.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Perform the steps of Alert Production (including, but not necessarily
-limited to, single frame processing, ISR, source detection/measurement,
-PSF estimation, photometric and astrometric calibration, difference
-imaging, DIASource detection/measurement, source association). During
-Operations, it is presumed that these are automated for a given
-dataset.~
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-An output dataset including difference images and DIASource and
-DIAObject measurements.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Verify that the expected data products have been produced, and that
-catalogs contain reasonable values for measured quantities of interest.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Load the Prompt Processing QC reports, and observe that a dynamically
-updated Data Quality Report has become available at the relevant UI.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A Prompt Processing QC report is available via a UI, and contains
-information about the photometric zeropoint, sky brightness, seeing,
-PSF, and detection efficiency, and possibly other relevant quantities.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Check that a static report is created and archived in a
-readily-accessible location.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Persistence of a static QC report in an accessible location, containing
-the same information as in the report from Step 3.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T146 - Verify implementation of DMS Initialization Component }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{\textit{ LVV-T146 } }
-test case in Jira.
-
-Demonstrate that the DMS can be initialized in a safe state that will
-not allow data corruption/loss.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Power-cycle all of the DM systems at each Facility.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Restart of all DM systems.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Observe each system and ensure that it has recovered in a properly
-initialized state.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Systems are all active and initialized for their designated purpose.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T144 - Verify implementation of Task Specification }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{\textit{ LVV-T144 } }
-test case in Jira.
-
-Verify that the DMS provides the ability to define a new or modified
-pipeline task without recompilation.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Inspect software architecture. ~Verify that there exist Tasks that can
-be run and configured without re-compilation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Confirmation that the software architecture has allowed for
-reconfiguring and running Tasks without recompilation.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Verify that an example science algorithm can be run through one of these
-Tasks.~ Three examples from different areas: source measurement, image
-subtraction, and photometric-redshift estimation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Successful Task execution with different configurations, including
-confirmation that the outputs are different from tasks with altered
-configurations.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T145 - Verify implementation of Task Configuration }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{\textit{ LVV-T145 } }
-test case in Jira.
-
-Verify that the DMS software provides configuration control to define,
-override, and verify the configuration for a DMS Task.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Inspect software design to verify that one can define the configuration
-for a Task.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run a Task with a known invalid configuration. ~Verify that the error is
-caught before the science algorithm executes.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run a simple task with two different configurations that make a material
-difference for a Task. ~E.g., specify a different source detection
-threshold. ~Verify that the configuration is different between the two
-runs through difference in recorded provenance and in results.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -4456,6 +4026,496 @@ contain the expected data.
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
 Camera test stand data that is well-formed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T146 - Verify implementation of DMS Initialization Component }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{\textit{ LVV-T146 } }
+test case in Jira.
+
+Demonstrate that the DMS can be initialized in a safe state that will
+not allow data corruption/loss.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Power-cycle all of the DM systems at each Facility.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Restart of all DM systems.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Observe each system and ensure that it has recovered in a properly
+initialized state.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Systems are all active and initialized for their designated purpose.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T144 - Verify implementation of Task Specification }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{\textit{ LVV-T144 } }
+test case in Jira.
+
+Verify that the DMS provides the ability to define a new or modified
+pipeline task without recompilation.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task specification and execution are in active
+development, we will defer this test to a later campaign that takes
+place after Gen3 has stabilized.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Inspect software architecture. ~Verify that there exist Tasks that can
+be run and configured without re-compilation.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmation that the software architecture has allowed for
+reconfiguring and running Tasks without recompilation.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that an example science algorithm can be run through one of these
+Tasks.~ Three examples from different areas: source measurement, image
+subtraction, and photometric-redshift estimation.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Successful Task execution with different configurations, including
+confirmation that the outputs are different from tasks with altered
+configurations.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T145 - Verify implementation of Task Configuration }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{\textit{ LVV-T145 } }
+test case in Jira.
+
+Verify that the DMS software provides configuration control to define,
+override, and verify the configuration for a DMS Task.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task configuration, specification, and execution
+are in active development, we will defer this test to a later campaign
+that takes place after Gen3 has stabilized.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Inspect software design to verify that one can define the configuration
+for a Task.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run a Task with a known invalid configuration. ~Verify that the error is
+caught before the science algorithm executes.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run a simple task with two different configurations that make a material
+difference for a Task. ~E.g., specify a different source detection
+threshold. ~Verify that the configuration is different between the two
+runs through difference in recorded provenance and in results.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T45 - Verify implementation of Prompt Processing Data Quality Report
+Definition }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{\textit{ LVV-T45 } }
+test case in Jira.
+
+Verify that the DMS produces a Prompt Processing Data Quality Report.
+~Specifically check absolute value and temporal variation of\\
+1. Photometric zeropoint\\
+2. Sky brightness\\
+3. Seeing\\
+4. PSF\\
+5. Detection efficiency
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Data Quality Report
+would be available by the time of this Test Campaign. Because the report
+has not yet been defined, nor the automated pipeline to ingest and
+process data, then generate the report, we defer this test to a later
+campaign.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Ingest raw data from L1 Test Stand DAQ.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Perform the steps of Alert Production (including, but not necessarily
+limited to, single frame processing, ISR, source detection/measurement,
+PSF estimation, photometric and astrometric calibration, difference
+imaging, DIASource detection/measurement, source association). During
+Operations, it is presumed that these are automated for a given
+dataset.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An output dataset including difference images and DIASource and
+DIAObject measurements.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that the expected data products have been produced, and that
+catalogs contain reasonable values for measured quantities of interest.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Load the Prompt Processing QC reports, and observe that a dynamically
+updated Data Quality Report has become available at the relevant UI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A Prompt Processing QC report is available via a UI, and contains
+information about the photometric zeropoint, sky brightness, seeing,
+PSF, and detection efficiency, and possibly other relevant quantities.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Check that a static report is created and archived in a
+readily-accessible location.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Persistence of a static QC report in an accessible location, containing
+the same information as in the report from Step 3.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T46 - Verify implementation of Prompt Processing Performance Report Definition }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{\textit{ LVV-T46 } }
+test case in Jira.
+
+Verify that the DMS produces a Prompt Processing Performance Report.
+~Specifically check that the number of observations that describe each
+of the following:\\
+1. Successfully processed, recoverable failures, unrecoverable
+failures.\\
+2. Archived\\
+3. Result in science.\\[2\baselineskip]This is testing more the
+processing rather than the observatory system.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Performance Report would
+be available by the time of this Test Campaign. Because the report has
+not yet been defined, nor the automated pipeline to ingest and process
+data, then generate the report, we defer this test to a later campaign.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute single-day operations rehearsal, observe report
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
