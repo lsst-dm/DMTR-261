@@ -293,7 +293,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
-& {\small Robert Gruendl } & {\small  } &
+& {\small Robert Gruendl } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -544,7 +544,7 @@ become available, this test should be executed on them.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -556,7 +556,14 @@ become available, this test should be executed on them.
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+After some discussion, it was decided to defer this test to a later
+campaign. This is due in part to the lack of on-site personnel at some
+sites to execute the test. More importantly, however, is the need to
+understand whether this should be divided into multiple tests that
+address hardware at each of the various sites that are part of the DMS,
+and whether those systems should all be taken down simultaneously, or
+tested separately. We hope to execute this test as part of the next
+Operations Rehearsal.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -3892,7 +3899,7 @@ repos and is available through standard data access tools.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -3920,11 +3927,14 @@ Obtain some data on a camera test stand.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+ComCam data were obtained as part of the July 2020 Operations Rehearsal
+(see the report in DMTR-231: ``LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report'').~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3947,11 +3957,14 @@ The data is present at NCSA in non-empty repos.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+This was verified as part of LVV-T1934, which was a test to confirm that
+the data were transferred and ingested successfully from the Base
+Facility to NCSA.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3971,11 +3984,13 @@ Identify the relevant Butler repo of ingested camera test stand data.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We used the data from July 29, 2020, at the following path:\\
+repo\_path = `/project/shared/comCam/rerun/CALSET\_20200729\_1847\_v2/'
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -4006,11 +4021,14 @@ Butler repo available for reading.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+repo\_path =
+`/project/shared/comCam/rerun/CALSET\_20200729\_1847\_v2/'\\
+butler = dafPersist.Butler(repo\_path)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -4032,11 +4050,17 @@ Camera test stand data that is well-formed.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+In the associated Jupyter notebook entitled `test\_LVV-T1264.ipynb`, we
+loaded a bias and a flat image from the above repo. Each of these was
+displayed to confirm that it was a well-formed image, and histograms of
+the count values were plotted to show that the counts were as expected
+(i.e., that the bias values are centered on roughly 0.0, and the flat
+values on roughly 1.0).
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -4054,7 +4078,14 @@ not allow data corruption/loss.
 
 Execution status: {\bf Not Executed }
 
-Final comment:\\
+Final comment:\\After some discussion, it was decided to defer this test to a later
+campaign. This is due in part to the lack of on-site personnel at some
+sites to execute the test. More importantly, however, is the need to
+understand whether this should be divided into multiple tests that
+address hardware at each of the various sites that are part of the DMS,
+and whether those systems should all be taken down simultaneously, or
+tested separately. We hope to execute this test as part of the next
+Operations Rehearsal.
 
 
 Detailed steps results:
