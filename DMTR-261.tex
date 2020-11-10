@@ -136,8 +136,15 @@ particular, we will use Release 20.0.0 of the Pipelines.
 
 \subsection{Related Documentation}
 
+Docushare collection where additional relevant documentation can be found:
 
-No additional documentation provided.
+\begin{itemize}
+\item Jupyter notebooks in which many of these tests were executed are
+archived at~\href{https://github.com/lsst-dm/DMTR-261/}{this github
+repository}. The `executions/` directory contains the rendered, executed
+notebooks, while the `notebooks/` directory houses the un-executed
+notebooks.
+\end{itemize}
 
 
 \subsection{PMCS Activity}
@@ -428,7 +435,7 @@ notebook test\_LVV-T151.ipynb.
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test successfully executed on `lsst-devl`.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -507,7 +514,8 @@ sources (i.e., including galaxies).
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+See associated Jupyter notebooks `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -516,7 +524,7 @@ sources (i.e., including galaxies).
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+See associated Jupyter notebook `test\_LVV-T39.ipynb`.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -547,7 +555,10 @@ become available, this test should be executed on them.
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
+used data products created and ingested as part of the Operations
+Rehearsal detailed in \citeds{DMTR-231}: ``LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report''.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -626,12 +637,71 @@ data, then generate the report, we defer this test to a later campaign.
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+This test campaign successfully demonstrated that the DM system is
+satisfying an additional 14 newly-verified Test Cases. These correspond
+to 9 unique DMSR requirements that are now completely verified, and 2
+that are partially verified. The requirements that were verified include
+some related to basic image processing and data products (e.g.,
+difference imaging, well-formed processed visit images, WCS solution,
+source catalog quantities and properties), and a number of tests related
+to DM algorithms provided to calculate performance metrics. (Note that
+the DM system is not required to verify that the performance metrics are
+meeting their required thresholds, but simply that DM must provide the
+tools to calculate/evaluate the metrics.) The tests demonstrated that a
+subset of these metrics can be measured at present, and that the
+framework (namely, `validate\_drp`) exists to enable the addition of
+other metrics.\\[2\baselineskip]Some minor issues that arose
+include:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  An issue was uncovered in LVV-T1937 where the catalog quantities are
+  not presented with the correct units. A ticket was filed to fix this,
+  and this test will be revisited in a future campaign.
+\item
+  Two tests (LVV-T1756 and LVV-T1758) were given a status of ``Initial
+  Pass'' because the required software tools to execute the tests exist
+  and work fine, but there is no u-band data to test the algorithms on.
+  Thus even though the software meets the requirement, we will wait to
+  fully sign off on this requirement until we have u-band data for
+  testing.
+\item
+  A few of the tests that were originally planned were not executed
+  because of delays in the required tooling to become available (or
+  initial misunderstandings about the timelines for them to be ready).
+  These will be deferred to later test campaigns.
+\end{itemize}
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+The most important improvement that could be made to this process would
+be to automate many of the tests for data processing products rather
+than executing them in Jupyter notebooks. While the notebooks are good
+for visualization and documentation, the requirements (e.g., ``generate
+WCS for Visit Images'') should be verified via code that checks every
+image rather than just a subset, and that reports a single pass/fail
+result in the end. The current notebook based approach should be adapted
+for future test campaigns (especially as tests are performed on larger
+datasets).\\[2\baselineskip]Testing of requirements related to
+performance metrics currently relies on `validate\_drp`. While it is
+satisfactory for confirming that many of the performance metrics
+\emph{can} be calculated, `validate\_drp` is (a) not capable of
+calculating some types of metrics, and (b) will not scale up to larger
+datasets. A replacement based on the Gen3 Butler is currently being
+implemented, and will form the basis of performance metric testing and
+monitoring henceforth. This new tooling, which incorporates and/or
+updates many of the `validate\_drp` algorithms, will be used for future
+acceptance test campaigns.\\[2\baselineskip]LVV-T125 as written only
+requires testing that artificial sources can be inserted into the data
+and recovered after the fact. In a future test campaign, we recommend
+updating this Test Case to require insertion of artificial stars and
+galaxies, and perhaps to place some requirements on the level of
+accuracy with which their properties can be
+recovered.\\[2\baselineskip]Finally, this testing highlighted the need
+to clarify some requirements, or at least to be explicit and clear about
+how they are being interpreted when executing tests.
 
 \newpage
 \section{Detailed Test Results}
@@ -2062,7 +2132,7 @@ plane.
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Test successfully executed on `lsst-devl`.
 
 
 Detailed steps results:
@@ -3184,7 +3254,8 @@ Verify successful creation of a\\
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\See associated Jupyter notebooks `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`.
 
 
 Detailed steps results:
@@ -3361,7 +3432,7 @@ flux on the image to physical flux units.
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\See associated Jupyter notebook `test\_LVV-T39.ipynb`.
 
 
 Detailed steps results:
@@ -3901,7 +3972,10 @@ repos and is available through standard data access tools.
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
+used data products created and ingested as part of the Operations
+Rehearsal detailed in \citeds{DMTR-231}: ``LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report''.
 
 
 Detailed steps results:
