@@ -53,14 +53,14 @@ an LSST milestone pertaining to the Data Management Subsystem.
 \subsection{Objectives}
 \label{sect:objectives}
 
- This Acceptance Test campaign aims to verify a subset of
-\href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements related to
-the LSST Science Pipelines. It will be executed in conjunction with the
-release of Science Pipelines Version 20.0.0, but the pipeline release is
-not contingent upon this test campaign. This Test Plan aims to
-demonstrate that the included requirements have been met by Version
-20.0.0 of the Pipelines, and to thus fully verify their completion and
-readiness for LSST Operations.
+ This Acceptance Test campaign aims to verify a subset of DM subsystem
+requirements (\citeds{LSE-61}) requirements related to the LSST Science
+Pipelines. It will be executed in conjunction with the release of
+Science Pipelines Version 20.0.0, but the pipeline release is not
+contingent upon this test campaign. This Test Plan aims to demonstrate
+that the included requirements have been met by Version 20.0.0 of the
+Pipelines, and to thus fully verify their completion and readiness for
+LSST commissioning.
 
 
 
@@ -80,11 +80,11 @@ Requirements\\
 \citeds{LDM-503} Data Management Test Plan\\
 \citeds{LDM-639} LSST Data Management Acceptance Test Specification (issue
 2.1)\\[2\baselineskip]The tests will be performed using the HSC-RC2
-dataset (as defined in
-\href{https://jira.lsstcorp.org/browse/DM-11345}{DM-11345} ). When
-possible, we will start our tests with the data products resulting from
-processing HSC-RC2 with the v20\_0\_0\_rc1 pipelines release candidate
-(DM-24478) that was used to create v20 of the Science Pipelines.
+dataset (as described in \citeds{DMTN-091}: Test Datasets for Scientific
+Performance Monitoring). When possible, we will start our tests with the
+data products resulting from processing HSC-RC2 with the v20\_0\_0\_rc1
+pipelines release candidate (DM-24478) that was used to create v20 of
+the Science Pipelines.
 
 
 \subsection{Document Overview}
@@ -364,7 +364,7 @@ Jeffrey Carlin }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P71}{LVV-P71}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Science Pipelines Release 20.0.0 Acceptance Test Campaign }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C153}{LVV-C153}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Pipelines v20 Release DM Acceptance Test Campaign }} & Done \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Pipelines v20 Release DM Acceptance Test Campaign }} & In Progress \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
 &  1
@@ -557,8 +557,8 @@ become available, this test should be executed on them.
 \smallskip
 See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
 used data products created and ingested as part of the Operations
-Rehearsal detailed in \citeds{DMTR-231}: ``LDM-503-11a: ComCam OPS Readiness Test
-Plan and Report''.
+Rehearsal detailed in \citeds{DMTR-231}: LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -684,7 +684,8 @@ WCS for Visit Images'') should be verified via code that checks every
 image rather than just a subset, and that reports a single pass/fail
 result in the end. The current notebook based approach should be adapted
 for future test campaigns (especially as tests are performed on larger
-datasets).\\[2\baselineskip]Testing of requirements related to
+datasets). A Jira issue for this work has been created
+(DM-27586).\\[2\baselineskip]Testing of requirements related to
 performance metrics currently relies on `validate\_drp`. While it is
 satisfactory for confirming that many of the performance metrics
 \emph{can} be calculated, `validate\_drp` is (a) not capable of
@@ -698,10 +699,11 @@ requires testing that artificial sources can be inserted into the data
 and recovered after the fact. In a future test campaign, we recommend
 updating this Test Case to require insertion of artificial stars and
 galaxies, and perhaps to place some requirements on the level of
-accuracy with which their properties can be
-recovered.\\[2\baselineskip]Finally, this testing highlighted the need
-to clarify some requirements, or at least to be explicit and clear about
-how they are being interpreted when executing tests.
+accuracy with which their properties can be recovered. A Jira issue to
+do these updates has been created (DM-27587).\\[2\baselineskip]Finally,
+this testing highlighted the need to clarify some requirements, or at
+least to be explicit and clear about how they are being interpreted when
+executing tests.
 
 \newpage
 \section{Detailed Test Results}
@@ -712,13 +714,12 @@ how they are being interpreted when executing tests.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C153}{Pipelines v20 Release DM Acceptance Test Campaign}} in Jira.
 
 Test Cycle name: Pipelines v20 Release DM Acceptance Test Campaign\\
-Status: Done
+Status: In Progress
 
-This test cycle verifies a subset of
-\href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements related to
-the LSST Science Pipelines, in order to verify their completion and
-readiness for LSST Operations (i.e., that the requirements laid out in
-\citeds{LSE-61} have been met by the DM Systems).
+This test cycle verifies a subset of DM subsystem requirements (\citeds{LSE-61})
+requirements related to the LSST Science Pipelines, in order to verify
+their completion and readiness for LSST commissioning (i.e., that the
+requirements laid out in \citeds{LSE-61} have been met by the DM Systems).
 
 \subsubsection{Software Version/Baseline}
 All tests will be performed with LSST Science Pipelines release version
@@ -2510,10 +2511,12 @@ PA2 -- HSC-I -- 32.6 mmag\\
 PF1 -- HSC-I -- 34.6 \%\\
 PA2 -- HSC-R -- 33.4 mmag\\
 PF1 -- HSC-R -- 34.4 \%\\[2\baselineskip]Note that because the science
-pipelines are still in development, the actual resulting values for
-these metrics are not important. The requirement to be satisfied is that
-we have (a) provided the software to calculate them, and (b) provided a
-framework for comparing them to requirements. These are both satisfied.
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2715,14 +2718,15 @@ from tract 9813 are:\\[2\baselineskip]PA2 -- HSC-Y -- 34.2 mmag\\
 PF1 -- HSC-Y -- 20.5 \%\\
 PA2 -- HSC-Z -- 27.4 mmag\\
 PF1 -- HSC-Z -- 15.6 \%\\[2\baselineskip]Note that because the science
-pipelines are still in development, the actual resulting values for
-these metrics are not important. The requirement to be satisfied is that
-we have (a) provided the software to calculate them, and (b) provided a
-framework for comparing them to requirements. These are both
-satisfied.\\[2\baselineskip]This step is given a status of ``Initial
-Pass'' because there are no u-band data to test on. We have demonstrated
-that the capability is provided, but simply do not have data to pass
-through the code.
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.\\[2\baselineskip]This step is given a status of
+``Initial Pass'' because there are no u-band data to test on. We have
+demonstrated that the capability is provided, but simply do not have
+data to pass through the code.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2869,14 +2873,15 @@ a report is generated summarizing all of the metrics that were measured
 by `validate\_drp`. The relevant lines showing results for PA2 and PF1
 from tract 9813 are:\\[2\baselineskip]PA1 -- HSC-Y -- 15.5 mmag\\
 PA1 -- HSC-Z -- 12.9 mmag\\[2\baselineskip]Note that because the science
-pipelines are still in development, the actual resulting values for
-these metrics are not important. The requirement to be satisfied is that
-we have (a) provided the software to calculate them, and (b) provided a
-framework for comparing them to requirements. These are both
-satisfied.\\[2\baselineskip]This step is given a status of ``Initial
-Pass'' because there are no u-band data to test on. We have demonstrated
-that the capability is provided, but simply do not have data to pass
-through the code.
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.\\[2\baselineskip]This step is given a status of
+``Initial Pass'' because there are no u-band data to test on. We have
+demonstrated that the capability is provided, but simply do not have
+data to pass through the code.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3021,10 +3026,12 @@ by `validate\_drp`. The relevant lines showing results for PA2 and PF1
 from tract 9813 are:\\[2\baselineskip]PA1 -- HSC-G -- 13.5 mmag\\
 PA1 -- HSC-I -- 14.9 mmag\\
 PA1 -- HSC-R -- 15.5 mmag\\[2\baselineskip]Note that because the science
-pipelines are still in development, the actual resulting values for
-these metrics are not important. The requirement to be satisfied is that
-we have (a) provided the software to calculate them, and (b) provided a
-framework for comparing them to requirements. These are both satisfied.
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3974,8 +3981,8 @@ Execution status: {\bf Pass }
 
 Final comment:\\See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
 used data products created and ingested as part of the Operations
-Rehearsal detailed in \citeds{DMTR-231}: ``LDM-503-11a: ComCam OPS Readiness Test
-Plan and Report''.
+Rehearsal detailed in \citeds{DMTR-231}: LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report.
 
 
 Detailed steps results:
