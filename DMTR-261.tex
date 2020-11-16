@@ -1,6 +1,6 @@
 % generated from JIRA project LVV
 % using template at /usr/local/lib/python3.7/site-packages/docsteady/templates/dm-tpr.latex.jinja2.
-% using docsteady version 1.2rc20
+% using docsteady version 1.2rc24
 % Please do not edit -- update information in Jira instead
 
 \documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
@@ -24,7 +24,7 @@
 \begin{document}
 
 \def\milestoneName{Science Pipelines Release 20.0.0 Acceptance Test Campaign}
-\def\milestoneId{LVV-P71}
+\def\milestoneId{}
 \def\product{Acceptance}
 
 \setDocCompact{true}
@@ -38,7 +38,8 @@
 
 
 \setDocAbstract{
-This is the test plan and report for LVV-P71 (Science Pipelines Release 20.0.0 Acceptance Test Campaign),
+This is the test plan and report for
+\textbf{ Science Pipelines Release 20.0.0 Acceptance Test Campaign},
 an LSST milestone pertaining to the Data Management Subsystem.
 }
 
@@ -52,14 +53,13 @@ an LSST milestone pertaining to the Data Management Subsystem.
 \subsection{Objectives}
 \label{sect:objectives}
 
- This Acceptance Test campaign aims to verify a subset of
-\href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements related to
-the LSST Science Pipelines. It will be executed in conjunction with the
-release of Science Pipelines Version 20.0.0, but the pipeline release is
-not contingent upon this test campaign. This Test Plan aims to
-demonstrate that the included requirements have been met by Version
-20.0.0 of the Pipelines, and to thus fully verify their completion and
-readiness for LSST Operations.
+ This Acceptance Test campaign aims to verify a subset of DM subsystem
+requirements (\citeds{LSE-61}) related to the LSST Science Pipelines. It will be
+executed in conjunction with the release of Science Pipelines Version
+20.0.0, but the pipeline release is not contingent upon this test
+campaign. This Test Plan aims to demonstrate that the included
+requirements have been met by Version 20.0.0 of the Pipelines, and to
+thus fully verify their completion and readiness for LSST commissioning.
 
 
 
@@ -79,11 +79,11 @@ Requirements\\
 \citeds{LDM-503} Data Management Test Plan\\
 \citeds{LDM-639} LSST Data Management Acceptance Test Specification (issue
 2.1)\\[2\baselineskip]The tests will be performed using the HSC-RC2
-dataset (as defined in
-\href{https://jira.lsstcorp.org/browse/DM-11345}{DM-11345} ). When
-possible, we will start our tests with the data products resulting from
-processing HSC-RC2 with the v20\_0\_0\_rc1 pipelines release candidate
-(DM-24478) that was used to create v20 of the Science Pipelines.
+dataset (as described in \citeds{DMTN-091}: Test Datasets for Scientific
+Performance Monitoring). When possible, we will start our tests with the
+data products resulting from processing HSC-RC2 with the v20\_0\_0\_rc1
+pipelines release candidate (DM-24478) that was used to create v20 of
+the Science Pipelines.
 
 
 \subsection{Document Overview}
@@ -105,7 +105,7 @@ Section \ref{sect:overview} provides a summary of the test results, including an
 an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P71}{LVV-P71} in Jira is \textbf{ Approved }.
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P71}{LVV-P71} in Jira is \textbf{ Completed }.
 
 \subsection{References}
 \label{sect:references}
@@ -135,19 +135,20 @@ particular, we will use Release 20.0.0 of the Pipelines.
 
 \subsection{Related Documentation}
 
-The documentation related to this test campaign should be provided in the following DocuShare Collection
-(as per Verification Artifacts in Jira test plan LVV-P71).
+Docushare collection where additional relevant documentation can be found:
 
 \begin{itemize}
-\item DocuShare Collection Not Specified
+\item Jupyter notebooks in which many of these tests were executed are
+archived at~\href{https://github.com/lsst-dm/DMTR-261/}{this github
+repository}. The `executions/` directory contains the rendered, executed
+notebooks, while the `notebooks/` directory houses the un-executed
+notebooks.
 \end{itemize}
-
 
 
 \subsection{PMCS Activity}
 
-Primavera milestones related to the test campaign.
-
+Primavera milestones related to the test campaign:
 \begin{itemize}
 \item None
 \end{itemize}
@@ -170,47 +171,23 @@ Jeffrey Carlin }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
-& {\small Colin Slater } & {\small  } &
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
-& {\small Robert Lupton } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{LVV-T1946}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
-& {\small Fritz Mueller } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
-& {\small Colin Slater } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{LVV-T1947}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -218,103 +195,15 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
-& {\small Robert Lupton } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
-& {\small Jim Bosch } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
-& {\small Jim Bosch } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-& {\small Colin Slater } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -322,15 +211,95 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
-& {\small Colin Slater } & {\small  } &
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
-& {\small Eric Bellm } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
+& {\small Robert Gruendl } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -361,8 +330,16 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
-& {\small Robert Gruendl } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
+& {\small Eric Bellm } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
+& {\small Eric Bellm } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -384,260 +361,273 @@ Jeffrey Carlin }
 \begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
 \toprule
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P71}{LVV-P71}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Science Pipelines Release 20.0.0 Acceptance Test Campaign }} & Approved \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Science Pipelines Release 20.0.0 Acceptance Test Campaign }} & Completed \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C153}{LVV-C153}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Pipelines v20 Release DM Acceptance Test Campaign }} & Not Executed \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Pipelines v20 Release DM Acceptance Test Campaign }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{LVV-T1946}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{LVV-T1947}
 &  1
-& Not Executed &
+& Fail &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{LVV-T1086}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{LVV-T1085}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
+&   \href{https://jira.lsstcorp.org/browse/DM-26372}{DM-26372}
+\href{https://jira.lsstcorp.org/browse/DM-26372}{DM-26372}
 \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{LVV-T40}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container. The results of this test are contained in a Jupyter notebook
+named `test\_LVV-T40\_T1240.ipynb'.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{LVV-T1232}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&
-\\\hline
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/nb. Results appear in Jupyter
+notebook test\_LVV-T151.ipynb.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{LVV-T133}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Test successfully executed on `lsst-devl`.
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{LVV-T1759}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
+&  1
+& Initial Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
+&  1
+& Initial Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{LVV-T1757}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{LVV-T125}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+This test demonstrates that the injected fake sources are visible, and
+that their measured magnitudes match the input values. However, future
+exploration should probably test the same for a variety of artificial
+sources (i.e., including galaxies).
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{LVV-T36}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+See associated Jupyter notebooks `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{LVV-T39}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+See associated Jupyter notebook `test\_LVV-T39.ipynb`.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
+used data products created and ingested as part of the Operations
+Rehearsal detailed in \citeds{DMTR-231}: LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report.
+\medskip
+\end{minipage}
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{LVV-T146}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+After some discussion, it was decided to defer this test to a later
+campaign. This is due in part to the lack of on-site personnel at some
+sites to execute the test. More importantly, however, is the need to
+understand whether this should be divided into multiple tests that
+address hardware at each of the various sites that are part of the DMS,
+and whether those systems should all be taken down simultaneously, or
+tested separately. We hope to execute this test as part of the next
+Operations Rehearsal.
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{LVV-T144}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task specification and execution are in active
+development, we will defer this test to a later campaign that takes
+place after Gen3 has stabilized.
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{LVV-T145}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task configuration, specification, and execution
+are in active development, we will defer this test to a later campaign
+that takes place after Gen3 has stabilized.
 \medskip
 \end{minipage}
-&
-\\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{LVV-T1264}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T45}{LVV-T45}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
-
+This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Data Quality Report
+would be available by the time of this Test Campaign. Because the report
+has not yet been defined, nor the automated pipeline to ingest and
+process data, then generate the report, we defer this test to a later
+campaign.
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{LVV-T46}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Performance Report would
+be available by the time of this Test Campaign. Because the report has
+not yet been defined, nor the automated pipeline to ingest and process
+data, then generate the report, we defer this test to a later campaign.
+\medskip
+\end{minipage}
+&   \\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -646,12 +636,73 @@ Jeffrey Carlin }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+This test campaign successfully demonstrated that the DM system is
+satisfying an additional 14 newly-verified Test Cases. These correspond
+to 9 unique DMSR requirements that are now completely verified, and 2
+that are partially verified. The requirements that were verified include
+some related to basic image processing and data products (e.g.,
+difference imaging, well-formed processed visit images, WCS solution,
+source catalog quantities and properties), and a number of tests related
+to DM algorithms provided to calculate performance metrics. (Note that
+the DM system is not required to verify that the performance metrics are
+meeting their required thresholds, but simply that DM must provide the
+tools to calculate/evaluate the metrics.) The tests demonstrated that a
+subset of these metrics can be measured at present, and that the
+framework (namely, `validate\_drp`) exists to enable the addition of
+other metrics.\\[2\baselineskip]Some minor issues that arose
+include:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  An issue was uncovered in LVV-T1937 where the catalog quantities are
+  not presented with the correct units. A ticket was filed to fix this,
+  and this test will be revisited in a future campaign.
+\item
+  Two tests (LVV-T1756 and LVV-T1758) were given a status of ``Initial
+  Pass'' because the required software tools to execute the tests exist
+  and work fine, but there is no u-band data to test the algorithms on.
+  Thus even though the software meets the requirement, we will wait to
+  fully sign off on this requirement until we have u-band data for
+  testing.
+\item
+  A few of the tests that were originally planned were not executed
+  because of delays in the required tooling to become available (or
+  initial misunderstandings about the timelines for them to be ready).
+  These will be deferred to later test campaigns.
+\end{itemize}
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+The most important improvement that could be made to this process would
+be to automate many of the tests for data processing products rather
+than executing them in Jupyter notebooks. While the notebooks are good
+for visualization and documentation, the requirements (e.g., ``generate
+WCS for Visit Images'') should be verified via code that checks every
+image rather than just a subset, and that reports a single pass/fail
+result in the end. The current notebook based approach should be adapted
+for future test campaigns (especially as tests are performed on larger
+datasets). A Jira issue for this work has been created
+(DM-27586).\\[2\baselineskip]Testing of requirements related to
+performance metrics currently relies on `validate\_drp`. While it is
+satisfactory for confirming that many of the performance metrics
+\emph{can} be calculated, `validate\_drp` is (a) not capable of
+calculating some types of metrics, and (b) will not scale up to larger
+datasets. A replacement based on the Gen3 Butler is currently being
+implemented, and will form the basis of performance metric testing and
+monitoring henceforth. This new tooling, which incorporates and/or
+updates many of the `validate\_drp` algorithms, will be used for future
+acceptance test campaigns.\\[2\baselineskip]LVV-T125 as written only
+requires testing that artificial sources can be inserted into the data
+and recovered after the fact. In a future test campaign, we recommend
+updating this Test Case to require insertion of artificial stars and
+galaxies, and perhaps to place some requirements on the level of
+accuracy with which their properties can be recovered. A Jira issue to
+do these updates has been created (DM-27587).\\[2\baselineskip]Finally,
+this testing highlighted the need to clarify some requirements, or at
+least to be explicit and clear about how they are being interpreted when
+executing tests.
 
 \newpage
 \section{Detailed Test Results}
@@ -662,13 +713,12 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C153}{Pipelines v20 Release DM Acceptance Test Campaign}} in Jira.
 
 Test Cycle name: Pipelines v20 Release DM Acceptance Test Campaign\\
-Status: Not Executed
+Status: Done
 
-This test cycle verifies a subset of
-\href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements related to
-the LSST Science Pipelines, in order to verify their completion and
-readiness for LSST Operations (i.e., that the requirements laid out in
-\citeds{LSE-61} have been met by the DM Systems).
+This test cycle verifies a subset of DM subsystem requirements (\citeds{LSE-61})
+requirements related to the LSST Science Pipelines, in order to verify
+their completion and readiness for LSST commissioning (i.e., that the
+requirements laid out in \citeds{LSE-61} have been met by the DM Systems).
 
 \subsubsection{Software Version/Baseline}
 All tests will be performed with LSST Science Pipelines release version
@@ -679,20 +729,22 @@ Not provided.
 
 \subsubsection{Test Cases in LVV-C153 Test Cycle}
 
-\paragraph{ LVV-T28 - Verify implementation of Measurements in catalogs }\mbox{}\\
+\paragraph{ LVV-T28 - Verify implementation of measurements in catalogs from PVIs }\mbox{}\\
 
 Version \textbf{1}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{\textit{ LVV-T28 } }
 test case in Jira.
 
-Verify that source measurements in catalogs are in flux units.
+Verify that source measurements in catalogs containing measurements from
+processed visit images are in flux units.
 
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
 
 
 Detailed steps results:
@@ -729,18 +781,21 @@ Butler repo available for reading.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+We used the output repo from HSC-RC2 data processing, as executed using
+v20\_0\_0 of the science pipelines. It is tagged with ticket number
+DM-25349, and is located at this path on lsst-dev:
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Identify and read appropriate processed precursor datasets with the
-Butler, including one containing single-visit images, one with coadds,
-and one with difference imaging.~
+Identify and read an appropriate processed precursor dataset containing
+coadds with the Butler.~
 
 \medskip }
 \end{minipage}
@@ -755,17 +810,30 @@ and one with difference imaging.~
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed in a notebook named `test\_LVV-T28.ipynb`. Within
+the notebook, initialization of the Butler repo was done as
+follows:\\[2\baselineskip]import lsst.daf.persistence as dafPersist\\
+rc2\_repo = `/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'\\
+butler = dafPersist.Butler(rc2\_repo)\\[2\baselineskip]An arbitrary
+dataId for a processed visit image within this repo was
+chosen.\\[2\baselineskip]The specific code used:\\
+filter = `HSC-I'\\
+\# PVI:\\
+ccd = 14\\
+visit = 35890\\
+dataIdPVI = \{'filter':filter, `visit':visit, `ccd':ccd\}\\
+src = butler.get('src', dataId = dataIdPVI)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Verify that each of the single-visit, coadd, and difference image
-catalogs provide measurements in flux units.
+Verify that the single-visit catalog provides measurements in flux
+units.
 
 \medskip }
 \end{minipage}
@@ -781,387 +849,672 @@ Confirmation of measurements in catalogs encoded in flux units.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+In the notebook, we extracted the schema for the source catalog. Source
+flux measurements all contain the string ``instFlux'' (i.e.,
+``instrumental flux'') in their names, so we subselect on this string.
+We then confirm that all measurements with ``instFlux'' in their names
+have units of ``count'' using a simple assert statement. The results
+(seen in notebook `test\_LVV-T28.ipynb') are as
+follows:\\[2\baselineskip]All src instFlux entries have units of counts:
+True
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
-\paragraph{ LVV-T133 - Verify implementation of Provide Beam Projector Coordinate Calculation
-Software }\mbox{}\\
+\paragraph{ LVV-T1946 - Verify implementation of measurements in catalogs from coadds }\mbox{}\\
 
 Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{\textit{ LVV-T133 } }
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{\textit{ LVV-T1946 } }
 test case in Jira.
 
-Verify that the DMS provides software to calculate coordinates relating
-the collimated beam projector position and telescope pupil position to
-the illumination position on the telescope optical elements and focal
+Verify that source measurements in catalogs containing measurements from
+coadd images are in flux units.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We used the output repo from HSC-RC2 data processing, as executed using
+v20\_0\_0 of the science pipelines. It is tagged with ticket number
+DM-25349, and is located at this path on lsst-dev:
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify and read an appropriate processed precursor dataset containing
+coadds with the Butler.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed in a notebook named `test\_LVV-T1946.ipynb`.
+Within the notebook, initialization of the Butler repo was done as
+follows:\\[2\baselineskip]import lsst.daf.persistence as dafPersist\\
+rc2\_repo = `/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'\\
+butler = dafPersist.Butler(rc2\_repo)\\[2\baselineskip]An arbitrary
+dataId for a coadded image within this repo was
+chosen.\\[2\baselineskip]The specific code used:\\
+filter = `HSC-I'\\
+\# Coadd\\
+tract = 9615\\
+patch = `5,3'\\
+dataIdCoadd = \{'tract':tract, `filter':filter, `patch':patch\}\\
+forced\_src = butler.get('deepCoadd\_forced\_src', dataId = dataIdCoadd)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that the coadd catalog provides measurements in flux units.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmation of measurements in catalogs encoded in flux units.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In the notebook, we extracted the schema for the source catalog. Source
+flux measurements all contain the string ``instFlux'' (i.e.,
+``instrumental flux'') in their names, so we subselect on this string.
+We then confirm that all measurements with ``instFlux'' in their names
+have units of ``count'' using a simple assert statement. The results
+(seen in notebook `test\_LVV-T1946.ipynb') are as
+follows:\\[2\baselineskip]
+
+\begin{verbatim}
+All forced_src instFlux entries have units of counts:  True
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1947 - Verify implementation of measurements in catalogs from difference images }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{\textit{ LVV-T1947 } }
+test case in Jira.
+
+Verify that source measurements in catalogs containing measurements from
+difference images are in flux units.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Fail }
+
+Final comment:\\Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container.
+
+Issues found during the execution of LVV-T1947 test case:
+
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/DM-26372}{DM-26372}~~Units wrong in deepDiff\_diaSrc catalog
+
+\end{itemize}
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We used the output repo from DECam HiTS data processing regularly
+performed by Meredith Rawls, as recently (Aug. 2020) executed using
+v20\_0\_0 of the science pipelines. It is located at this path on
+lsst-dev: diffim\_repo = `/project/mrawls/hits2015/rerun/cw\_2020\_08'
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify and read an appropriate processed precursor dataset containing
+difference images with the Butler.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed in a notebook named `test\_LVV-T1947.ipynb`.
+Within the notebook, initialization of the Butler repo was done as
+follows:\\[2\baselineskip]import lsst.daf.persistence as
+dafPersist\\[2\baselineskip]An arbitrary dataId for a difference image
+catalog within this repo was chosen.\\[2\baselineskip]diffim\_repo =
+`/project/mrawls/hits2015/rerun/cw\_2020\_08'\\
+butler\_dia = dafPersist.Butler(diffim\_repo)\\
+dataId\_dia = \{'visit': 411406, `ccd': 15\}\\
+deepDiff\_dia\_src = butler\_dia.get('deepDiff\_diaSrc', dataId =
+dataId\_dia)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that the difference image source catalog provides measurements in
+flux units.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmation of measurements in catalogs encoded in flux units.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+In the notebook, we extracted the schema for the source catalog. Source flux measurements all contain the string “instFlux” (i.e., “instrumental flux”) in their names, so we subselect on this string. We then attempt to confirm that all measurements with “instFlux” in their names have units of “count” using a simple assert statement. The results (seen in notebook ‘test_LVV-T1947.ipynb’) are as follows:
+\end{verbatim}
+
+\begin{verbatim}
+AssertionError: FALSE: not all instFlux entries have units of counts.
+\end{verbatim}
+
+Specifically, the fields that did not meet the requirement are these. A
+Jira ticket has been filed to fix these.\\
+
+\begin{tabular}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.47\columnwidth}\raggedright\strut
+Column\strut
+\end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\raggedright\strut
+Units\strut
+\end{minipage}\tabularnewline
+\midrule
+%\endhead
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\begin{verbatim}
+ip_diffim_DipoleFit_pos_instFluxErr
+\end{verbatim}
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+pixel\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\begin{verbatim}
+ip_diffim_DipoleFit_neg_instFluxErr
+\end{verbatim}
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+pixel\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\begin{verbatim}
+ip_diffim_forced_PsfFlux_instFlux
+\end{verbatim}
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+none\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\begin{verbatim}
+ip_diffim_forced_PsfFlux_instFluxErr
+\end{verbatim}
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+none\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{tabular}\\[\baselineskip]
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-26372}{DM-26372}~~Units wrong in deepDiff\_diaSrc catalog
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Fail } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T40 - Verify implementation of Generate WCS for Visit Images }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{\textit{ LVV-T40 } }
+test case in Jira.
+
+Verify that Processed Visit Images produced by the AP and DRP pipelines
+include FITS WCS accurate to specified \textbf{astrometricAccuracy} over
+the bounds of the image.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Test executed on lsst-lsp-stable, using Release v20.0.0, with a Large
+container. The results of this test are contained in a Jupyter notebook
+named `test\_LVV-T40\_T1240.ipynb'.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify an appropriate processed dataset for this test.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset with Processed Visit Images available.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We used the output repo from HSC-RC2 data processing, as executed using
+v20\_0\_0 of the science pipelines.~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The repository is tagged with ticket number DM-25349, and is located at
+this path on lsst-dev:
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349'
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select a single visit from the dataset, and extract its WCS object and
+the source list.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A table containing detected sources, and a WCS object associated with
+that catalog.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In practice, we iterated this process, randomly selecting 1000 visits
+and extracting the `src` catalog and the WCS associated with the
+`calexp` for each one.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that each CCD within the visit image contains at
+least~\textbf{astrometricMinStandards~}astrometric standards that were
+used in deriving the astrometric solution.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+At least \textbf{astrometricMinStandards} from each CCD\textbf{~}were
+used in determining the WCS solution.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This is captured by the ``hasWcs'' method on the `calexp`. We extract
+this for all of the 1000 random visits.\\[2\baselineskip]if
+butler.datasetExists('calexp', dataId = dataref):\\
+calexp = butler.get('calexp', dataId = dataref)\\
+haswcs\_flags.append(butler.get('calexp', dataId =
+dataref).hasWcs())\\[2\baselineskip]Result of the test:\\
+
+\begin{verbatim}
+Percentage of fields with > astrometricMinStandards=5:  100.0 %  --  True
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Starting from the XY pixel coordinates of the sources, apply the WCS to
+obtain RA, Dec coordinates.\\[2\baselineskip]
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A list of RA, Dec coordinates for all sources in the catalog.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This was done using the following code:\\[2\baselineskip]\# Start from
+XY, then use the WCS to convert to RA, Dec:\\
+xxx = src.getX()\\
+yyy = src.getY()\\
+radec = {[}wcs.pixelToSky(xxx{[}i{]}, yyy{[}i{]}) for i in
+range(len(xxx)){]}\\
+radec\_arr = np.array({[}(coo.getRa().asDegrees(),
+coo.getDec().asDegrees()) for coo in radec{]})
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+We will assume that Gaia provides a source of ``truth.'' Match the
+source list to Gaia DR2, and calculate the positional offset between the
+test data and the Gaia catalog.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A matched catalog of sources in common between the test source list and
+Gaia DR2.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Used astroquery to extract Gaia sources, then Astropy utilities to match
+the catalogs:\\[2\baselineskip]gaia\_mch =
+Gaia.query\_object\_async(coordinate=cen, width=width, height=height)\\
+sc\_src = SkyCoord(radec\_arr{[}:,0{]}*u.deg,
+radec\_arr{[}:,1{]}*u.deg)\\
+sc\_gaia = SkyCoord(gaia\_mch{[}'ra'{]}, gaia\_mch{[}'dec'{]})\\
+src\_match = sc\_src.match\_to\_catalog\_sky(sc\_gaia)\\
+sep\_match = src\_match{[}1{]}\\[2\baselineskip]Filtered the matched
+catalog to keep only matches with \textless{}0.5'' separation and with
+magnitude difference \textless{} 1.0 (relative to the median magnitude
+difference of all sources, to account for different filters):\\
+okmch = (sep\_match.arcsec \textless{} 0.5)\\
+matchsep = sep\_match{[}okmch{]}\\[2\baselineskip]\# Require the matches
+to have similar magnitudes:\\
+gaia\_gmag = gaia\_mch{[}'phot\_g\_mean\_mag'{]}\\
+magdiff =
+src\_mag{[}okmch{]}{[}:,0{]}-gaia\_gmag{[}src\_match{[}0{]}{[}okmch{]}{]}\\
+okmagdiff = (np.abs(magdiff - np.median(magdiff)) \textless{} 1.0)\\
+okmatchsep = matchsep{[}okmagdiff{]}\\[2\baselineskip]This yields the
+final matched list.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Apply appropriate cuts to extract the optimal dataset for comparison,
+then calculate statistics (median, 1-sigma range, etc.; also plot a
+histogram) of the offsets in milliarcseconds. Confirm that the offset is
+less than \textbf{astrometricAccuracy}.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Histogram and relevant statistics needed to confirm that the WCS
+transformation is accurate.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We retained only CCDs with \textgreater{}10 matches to Gaia sources.
+Rather than histograms, we used comparisons of the various extracted
+parameters. Figures are shown in the notebook
+(`test\_LVV-T40\_T1240.ipynb`).\\[2\baselineskip]In addition to figures,
+we calculated the percentage of images that satisfied the requirement on
+\textbf{astrometricAccuracy}. This was slightly less than 100\% in all
+trials, likely due to some deep (or problematic) images having few Gaia
+matches. The results printed in the notebook are as
+follows:\\[2\baselineskip]
+
+\begin{verbatim}
+Percentage of fields meeting the threshold:  98.7551867219917 %  --  False
+\end{verbatim}
+
+Because a small fraction of fields do not meet the criterion, the test
+for LVV-T40 technically does not pass. Given that \textasciitilde{}98\%
+of the selected CCDs met the astrometric accuracy criterion, and that
+the small number not passing may be due to a lack of Gaia reference
+catalog objects, or data quality issues with the input images (i.e.,
+\emph{not} due to a deficiency in DM algorithms), we consider the result
+of this test \textbf{``Pass.''} However, we recommend that the required
+fraction of images meeting the astrometric accuracy criterion should be
+clarified, and that the data quality selection needed to test this
+requirement should be better defined.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Repeat Step 5, but for subregions of the image, to confirm that the
+accuracy criterion is met at all positions.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{astrometricAccuracy~}requirement is met over the entire image.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This is implicit in the random selection of 1000 CCDs in the analysis.
+By its nature, the process samples a variety of subregions in the focal
 plane.
 
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-On the LSST development cluster or notebook aspect, git clone the repo
-containing the CBP package: \url{https://github.com/lsst/cbp}
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Follow the steps in the package README to install the package.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the package can be loaded in python, and that some of the
-tests in the `tests/` folder will execute.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Successful execution of test scripts, which demonstrate the calculation
-of beam projector coordinates.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1087 - Full Table Joins Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{\textit{ LVV-T1087 } }
-test case in Jira.
-
-The objective of this test is to ensure that the full table join queries
-are performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
-s.objectId, s.id, o.ra, o.decl\\
-\textbf{~ ~ FROM} Object o, Source s WHERE o.deepSourceId=s.objectId\\
-\hspace*{0.333em} ~ \textbf{AND} s . flux\_sinc \textbf{BETWEEN} 0.3
-\textbf{AND} 0.31\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} o.deepSourceId,
-f.psfFlux \textbf{FROM} Object o, ForcedSource f\\
-\textbf{~ ~ WHERE} o.deepSourceId=f.deepSourceId\\
-\textbf{~ ~ AND} f . psfFlux \textbf{BETWEEN} 0.13 \textbf{AND}
-0.14\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1086 - Full Table Scans Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1086}{\textit{ LVV-T1086 } }
-test case in Jira.
-
-The objective of this test is to ensure that the full table scan queries
-are performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} ra , decl , u\_psfFlux ,
-g\_psfFlux , r\_psfFlux \textbf{FROM} Object\\
-\textbf{WHERE} y\_shapeIxx \textbf{BETWEEN} 20 \textbf{AND}
-20.1\\[3\baselineskip]and record execution time and output size.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 1 hour.\\[2\baselineskip]
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
-Source \textbf{WHERE} flux\_sinc \textbf{BETWEEN} 1 \textbf{AND}
-1.1\\[2\baselineskip]and record the execution time
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute query:\\[2\baselineskip]\textbf{SELECT} COUNT(*) \textbf{FROM}
-ForcedSource \textbf{WHERE} psfFlux \textbf{BETWEEN} 0.1 \textbf{AND}
-0.2\\[2\baselineskip]and record the execution time
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query expected to run in less than 12 hours.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1085 - Short Queries Functional Test }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1085}{\textit{ LVV-T1085 } }
-test case in Jira.
-
-The objective of this test is to ensure that the short queries are
-performing as expected and establish a timing baseline benchmark for
-these types of queries.
-
-\textbf{ Preconditions}:\\
-QSERV has been set-up following procedure at ~LVV-T1017.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute single object selection:\\[2\baselineskip]\textbf{SELECT} *
-\textbf{FROM} Object~\textbf{WHERE} deepSourceId =
-9292041530376264\\[2\baselineskip]and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query runs in less than 10 seconds.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute spatial area selection from
-Object:\\[2\baselineskip]\textbf{SELECT COUNT(*)} \textbf{FROM} Object
-\textbf{WHERE}~\\
-
-~qserv\_areaspec\_box(316.582327, −6.839078, 316.653938, −6.781822)
-
-and record execution time.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Query runs in less than 10 seconds.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -1177,9 +1530,10 @@ variety of community-standard formats.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/
 
 
 Detailed steps results:
@@ -1208,11 +1562,13 @@ A credential-entry screen should be displayed.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+While logged into the NCSA VPN, two-factor authentication credentials
+were entered at the prompts.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1234,11 +1590,12 @@ The Portal Aspect UI should be displayed following authentication.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Splash page of Portal Aspect displayed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1258,11 +1615,13 @@ Select query type ``ADQL''.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Selected via the ``ADQL'' button on the Portal splash page, which
+brought up a box in which to type queries.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1294,11 +1653,12 @@ as well.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Query executed quickly, and returned a table with 50000 results.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1319,11 +1679,12 @@ as an IPAC, CSV, or TSV table'' when you mouse over it).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Save menu pops up with options.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 6 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1354,11 +1715,17 @@ as an IPAC, CSV, or TSV table'' when you mouse over it).
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Files are present on disk:\\[2\baselineskip]\$ ls -ltrh\\
+total 20232\\
+-rw-r--r--@ 1 jcarlin~~staff ~~3.7M Aug 19 16:31 LVV-T1232\_test.csv\\
+-rw-r--r--@ 1 jcarlin~~staff ~~3.1M Aug 19 16:33
+LVV-T1232\_test\_vot.xml\\
+-rw-r--r--@ 1 jcarlin staff 3.1M Aug 19 16:33 LVV-T1232\_test.fits
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 7 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1380,11 +1747,13 @@ contains the same columns and the same number of rows.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Each file was opened in TOPCAT, and it was confirmed that each of them
+contains the same 6 columns and 50000 rows.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 8 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -1408,1956 +1777,12 @@ to execute the steps in LVV-T849.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Exited the Portal Aspect and closed the browser window.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T40 - Verify implementation of Generate WCS for Visit Images }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T40}{\textit{ LVV-T40 } }
-test case in Jira.
-
-Verify that Processed Visit Images produced by the AP and DRP pipelines
-include FITS WCS accurate to specified \textbf{astrometricAccuracy} over
-the bounds of the image.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify an appropriate processed dataset for this test.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset with Processed Visit Images available.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Select a single visit from the dataset, and extract its WCS object and
-the source list.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A table containing detected sources, and a WCS object associated with
-that catalog.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that each CCD within the visit image contains at
-least~\textbf{astrometricMinStandards~}astrometric standards that were
-used in deriving the astrometric solution.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-At least \textbf{astrometricMinStandards} from each CCD\textbf{~}were
-used in determining the WCS solution.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Starting from the XY pixel coordinates of the sources, apply the WCS to
-obtain RA, Dec coordinates.\\[2\baselineskip]
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A list of RA, Dec coordinates for all sources in the catalog.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-We will assume that Gaia provides a source of ``truth.'' Match the
-source list to Gaia DR2, and calculate the positional offset between the
-test data and the Gaia catalog.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A matched catalog of sources in common between the test source list and
-Gaia DR2.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-7 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Apply appropriate cuts to extract the optimal dataset for comparison,
-then calculate statistics (median, 1-sigma range, etc.; also plot a
-histogram) of the offsets in milliarcseconds. Confirm that the offset is
-less than \textbf{astrometricAccuracy}.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Histogram and relevant statistics needed to confirm that the WCS
-transformation is accurate.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-8 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Repeat Step 5, but for subregions of the image, to confirm that the
-accuracy criterion is met at all positions.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\textbf{astrometricAccuracy~}requirement is met over the entire image.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1759 - Verify calculation of photometric outliers in gri bands }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{\textit{ LVV-T1759 } }
-test case in Jira.
-
-Verify that the DM system has provided the code to calculate the
-photometric repeatability in the g, r, and i filters, and assess whether
-it meets the requirement that no more than \textbf{PF1 =
-10{[}percent{]}} of the repeatability outliers exceed the outlier limit
-of \textbf{PA2gri = 15 millimagnitudes}.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset containing at least one field in each of the g, r,
-and i filters with multiple overlapping visits.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset that has been ingested into a Butler repository.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-The `path` that you will use depends on where you are running the
-science pipelines. Options:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  local (newinstall.sh - based
-  install):{[}path\_to\_installation{]}/loadLSST.bash
-\item
-  development cluster (``lsst-dev''):
-  /software/lsstsw/stack/loadLSST.bash
-\item
-  LSP Notebook aspect (from a terminal):
-  /opt/lsst/software/stack/loadLSST.bash
-\end{itemize}
-
-From the command line, execute the commands below in the example
-code:\\[2\baselineskip]
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-source `path`\\
-setup lsst\_distrib
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Science pipeline software is available for use. If additional packages
-are needed (for example, `obs' packages such as `obs\_subaru`), then
-additional `setup` commands will be necessary.\\[2\baselineskip]To check
-versions in use, type:\\
-eups list -s
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute `validate\_drp` on a repository containing precursor data.
-Identify the path to the data, which we will call `DATA/path', then
-execute the following (with additional flags specified as needed):
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-validateDrp.py `DATA/path`
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-JSON files (and associated figures) containing the Measurements and any
-associated ``extras.''
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the metric PA2gri has been calculated using the threshold
-PF1, and that its values are reasonable.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A JSON file (and/or a report generated from that JSON file)
-demonstrating that PA2gri has been calculated (and that it used PF1).
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1758 - Verify calculation of photometric outliers in uzy bands }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{\textit{ LVV-T1758 } }
-test case in Jira.
-
-Verify that the DM system has provided the code to calculate the
-photometric repeatability in the u, z, and y filters, and assess whether
-it meets the requirement that no more than \textbf{PF1 =
-10{[}percent{]}} of the repeatability outliers exceed the outlier limit
-of \textbf{PA2uzy = 22.5 millimagnitudes}.~
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset containing at least one field in each of the u, z,
-and y filters with multiple overlapping visits.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset that has been ingested into a Butler repository.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-The `path` that you will use depends on where you are running the
-science pipelines. Options:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  local (newinstall.sh - based
-  install):{[}path\_to\_installation{]}/loadLSST.bash
-\item
-  development cluster (``lsst-dev''):
-  /software/lsstsw/stack/loadLSST.bash
-\item
-  LSP Notebook aspect (from a terminal):
-  /opt/lsst/software/stack/loadLSST.bash
-\end{itemize}
-
-From the command line, execute the commands below in the example
-code:\\[2\baselineskip]
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-source `path`\\
-setup lsst\_distrib
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Science pipeline software is available for use. If additional packages
-are needed (for example, `obs' packages such as `obs\_subaru`), then
-additional `setup` commands will be necessary.\\[2\baselineskip]To check
-versions in use, type:\\
-eups list -s
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute `validate\_drp` on a repository containing precursor data.
-Identify the path to the data, which we will call `DATA/path', then
-execute the following (with additional flags specified as needed):
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-validateDrp.py `DATA/path`
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-JSON files (and associated figures) containing the Measurements and any
-associated ``extras.''
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the metric PA2uzy has been calculated using the threshold
-PF1, and that its values are reasonable.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A JSON file (and/or a report generated from that JSON file)
-demonstrating that PA2uzy has been calculated (and that it used PF1).
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1756 - Verify calculation of photometric repeatability in uzy filters }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{\textit{ LVV-T1756 } }
-test case in Jira.
-
-Verify that the DM system has provided the code to calculate the RMS
-photometric repeatability of bright non-saturated unresolved point
-sources in the u, z, and y filters, and assess whether it meets the
-requirement that it shall be less than \textbf{PA1uzy = 7.5
-millimagnitudes}.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset containing at least one field in each of the u, z,
-and y filters with multiple overlapping visits.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset that has been ingested into a Butler repository.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute `validate\_drp` on a repository containing precursor data.
-Identify the path to the data, which we will call `DATA/path', then
-execute the following (with additional flags specified as needed):
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-validateDrp.py `DATA/path`
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-JSON files (and associated figures) containing the Measurements and any
-associated ``extras.''
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the metric PA1uzy has been calculated, and that its values
-are reasonable.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A JSON file (and/or a report generated from that JSON file)
-demonstrating that PA1uzy has been calculated.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1757 - Verify calculation of photometric repeatability in gri filters }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{\textit{ LVV-T1757 } }
-test case in Jira.
-
-Verify that the DM system has provided the code to calculate the RMS
-photometric repeatability of bright non-saturated unresolved point
-sources in the g, r, and i filters, and assess whether it meets the
-requirement that it shall be less than \textbf{PA1gri = 5.0
-millimagnitudes}.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset containing at least one field in each of the g, r,
-and i filters with multiple overlapping visits.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset that has been ingested into a Butler repository.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute `validate\_drp` on a repository containing precursor data.
-Identify the path to the data, which we will call `DATA/path', then
-execute the following (with additional flags specified as needed):
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-validateDrp.py `DATA/path`
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-JSON files (and associated figures) containing the Measurements and any
-associated ``extras.''
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the metric PA1gri has been calculated, and that its values
-are reasonable.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A JSON file (and/or a report generated from that JSON file)
-demonstrating that PA1gri has been calculated.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T125 - Verify implementation of Simulated Data }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{\textit{ LVV-T125 } }
-test case in Jira.
-
-Verify that the DMS can inject simulated data into data products for
-testing.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset that has been (or can be readily) processed through
-single-frame processing and coaddition.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-The `calexp` and `deepCoadd\_calexp` images and their associated source
-catalogs are created.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Roughly determine the coordinates of a bounding box that is contained
-within the images that were processed.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-RA, Dec boundaries of a region in which to generate fake sources.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Generate a catalog in the correct format for `insertFakes` to accept.
-The catalog should specify positions and magnitudes of stars (and
-optionally, parameters specifying galaxy shape, if galaxies are also
-being inserted).
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-An input catalog of fake source positions and magnitudes to be inserted
-into the images.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute `insertFakes.py` on the repository, specifying the input catalog
-from the previous step.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A repository with images that have fake sources inserted.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run `multiBandDriver.py` on the repository, specifying the fake-source
-repository as the input.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-`calexp` and coadd images containing the artificial sources and sources
-catalogs that contain their measurements along with the sources detected
-in the original run.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm that the injected sources appear in the images and the catalogs.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Fake sources and their measured properties are recoverable.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T36 - Verify implementation of Difference Exposures }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{\textit{ LVV-T36 } }
-test case in Jira.
-
-Verify successful creation of a\\
-1. PSF-matched template image for a given Processed Visit Image\\
-2. Difference Exposure from each Processed Visit Image
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-The `path` that you will use depends on where you are running the
-science pipelines. Options:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  local (newinstall.sh - based
-  install):{[}path\_to\_installation{]}/loadLSST.bash
-\item
-  development cluster (``lsst-dev''):
-  /software/lsstsw/stack/loadLSST.bash
-\item
-  LSP Notebook aspect (from a terminal):
-  /opt/lsst/software/stack/loadLSST.bash
-\end{itemize}
-
-From the command line, execute the commands below in the example
-code:\\[2\baselineskip]
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-source `path`\\
-setup lsst\_distrib
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Science pipeline software is available for use. If additional packages
-are needed (for example, `obs' packages such as `obs\_subaru`), then
-additional `setup` commands will be necessary.\\[2\baselineskip]To check
-versions in use, type:\\
-eups list -s
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Perform the steps of Alert Production (including, but not necessarily
-limited to, single frame processing, ISR, source detection/measurement,
-PSF estimation, photometric and astrometric calibration, difference
-imaging, DIASource detection/measurement, source association). During
-Operations, it is presumed that these are automated for a given
-dataset.~
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-An output dataset including difference images and DIASource and
-DIAObject measurements.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Verify that the expected data products have been produced, and that
-catalogs contain reasonable values for measured quantities of interest.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Demonstrate successful creation of a template image from HSC PDF and
-DECAM HiTS data. ~Demonstrate successful creation of a Difference
-Exposure for at least 10 other images from survey, ideally at a range of
-arimass. ~In particular, HiTS has 2013A u-band data. ~While the Blanco
-4-m does have an ADC, there are still some chromatic effects and we
-should demonstrate that we can successfully produce Difference Exposures
-and templates for diferent airmass bins.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T126 - Verify implementation of Image Differencing }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{\textit{ LVV-T126 } }
-test case in Jira.
-
-Verify that the DMS can performance image differencing from single
-exposures and coadds.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a repository containing data that have been processed through
-the difference imaging pipeline. (e.g., the HiTS 2015 data that are
-processed monthly for testing)
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A dataset containing calexps, difference images, and source catalogs (of
-diaSrcs).
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Extract a `calexp`, a `deepDiff\_differenceExp`, and the
-`deepDiff\_diaSrc` catalog of measurements.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Well-formed images and catalogs containing the calexp from the visit
-image and the difference image, and measurements of sources from the
-difference image.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Confirm (by visual inspection) that the difference image is mostly blank
-sky (i.e., has had a template of the same field subtracted), and that
-the source catalog contains sources with photometric and astrometric
-measurements.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A mostly blank image (with perhaps some artifacts due to imperfect
-subtraction) and a catalog of sources detected/measured from that image.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T39 - Verify implementation of Generate Photometric Zeropoint for Visit Image }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{\textit{ LVV-T39 } }
-test case in Jira.
-
-Verify that Processed Visit Image data products produced by the DRP and
-AP pipelines include the parameters of a model that relates the observed
-flux on the image to physical flux units.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify a dataset with processed visit images in multiple filters.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Extract the photometric zeropoint from the source catalog associated
-with a visit image. Repeat this for all available filters, and confirm
-that the zeropoint has been set, and has a reasonable value.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A zeropoint that enables one to convert the measured fluxes to
-magnitudes.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Extract fluxes for some sources, and convert them to magnitudes. Confirm
-that the distribution spans a reasonable range.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-In most cases, well-measured magnitudes (i.e., for high S/N
-measurements) should be between 12 to 28 for all bands.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T46 - Verify implementation of Prompt Processing Performance Report Definition }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{\textit{ LVV-T46 } }
-test case in Jira.
-
-Verify that the DMS produces a Prompt Processing Performance Report.
-~Specifically check that the number of observations that describe each
-of the following:\\
-1. Successfully processed, recoverable failures, unrecoverable
-failures.\\
-2. Archived\\
-3. Result in science.\\[2\baselineskip]This is testing more the
-processing rather than the observatory system.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute single-day operations rehearsal, observe report
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T38 - Verify implementation of Processed Visit Images }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{\textit{ LVV-T38 } }
-test case in Jira.
-
-Verify that the DMS\\
-1. Successfully produces Processed Visit Images, where the instrument
-signature has been removed.\\
-2. Successfully combines images obtained during a standard visit.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify suitable precursor datasets containing unprocessed raw images.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run the Prompt Processing payload on these data. ~Verify that Processed
-Visit Images are generated at correct size and with significant
-instrumental artifacts removed.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Raw precursor dataset images have been processed into Processed Visit
-Images, with instrumental artifacts corrected.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run camera test stand data through full acquisition+backbone+ISR.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run simulated LSST data with calibrations through prompt processing
-system and inspect Processed Visit images to verify that they have been
-cleaned of significant artifacts and are of the correct, shape, and
-described orientation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Raw images have been processed into Processed Visit Images, with
-instrumental artifacts corrected.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T42 - Verify implementation of Processed Visit Image Content }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{\textit{ LVV-T42 } }
-test case in Jira.
-
-Verify that Processed Visit Images produced by the DRP and AP pipelines
-include the observed data, a mask array, a variance array, a PSF model,
-and a WCS model.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Ingest the data from an appropriate processed dataset.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Select a single visit from the dataset, and extract its WCS object,
-calexp image, psf model, and source list.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Inspect the calexp image to ensure that
-
-\begin{enumerate}
-\tightlist
-\item
-  A well-formed image is present,
-\item
-  The variance plane is present and well-behaved,
-\item
-  Mask planes are present and contain information about defects.
-\end{enumerate}
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-An astronomical image with mask and variance planes. This can be readily
-visualized using Firefly, which displays mask planes by default.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Plot images of the PSF model at various points, and verify that the PSF
-differs with position.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A ``star-like'' image of the PSF evaluated at various positions. The PSF
-should vary slightly with position (this could be readily visualized by
-taking a difference of PSFs at two positions).
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Starting from the XY pixel coordinates of the sources, apply the WCS to
-obtain RA, Dec coordinates. Plot these positions and confirm that they
-match the expected values from the WCS object.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-RA, Dec coordinates that are returned should be near the central
-position of the visit coordinate as given in either the calexp metadata
-or the WCS.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-7 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Repeat steps 2-6, but now with difference images created by the Alert
-Production pipeline (for example, in the `ap\_verify` test data
-processing).
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T149 - Verify implementation of Catalog Queries }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{\textit{ LVV-T149 } }
-test case in Jira.
-
-Verify that SQL, or a similar structured language, can be used to query
-catalogs.
-
-\textbf{ Preconditions}:\\
-An operational QSERV database that has been verified via
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1085}{LVV-T1085}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1086}{LVV-T1086}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1087}{LVV-T1087}.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Execute a simple query (for example, the one below) and confirm that it
-returns the expected result.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-SELECT * FROM Object WHERE qserv\_areaspec\_box(316.582327, −6.839078,
-316.653938, −6.781822)
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-A catalog of objects satisfying the specified constraints.~
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Repeat the query from all available access routes (e.g., an external VO
-client, internal DM tools on the development cluster, the Science
-Platform query tool, and from within the Notebook Aspect), confirming in
-each case that the results are as expected.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 \end{longtable}
 
@@ -3373,9 +1798,11 @@ variety of community-standard formats.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Executed using the Portal aspect at:
+https://lsst-lsp-stable.ncsa.illinois.edu/nb. Results appear in Jupyter
+notebook test\_LVV-T151.ipynb.
 
 
 Detailed steps results:
@@ -3405,11 +1832,14 @@ containerized stack version and machine flavor.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+While logged into the NCSA VPN, two-factor authentication credentials
+were entered at the prompts. Notebook Aspect authentication credentials
+were entered at the prompt.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 2 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3434,11 +1864,13 @@ container containing the correct stack version.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+For this test, we use Release v20.0.0, with a Large container. The
+JupyterLab environment is presented.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 3 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3461,11 +1893,14 @@ versions for each.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+A launcher appeared with ``Python 3'' and ``LSST'' options under
+``Notebook'' and ``Console'', and various options in the ``Other''
+category.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 4 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3488,11 +1923,13 @@ An empty notebook with a single empty cell. ~The kernel show up as
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+Notebook was displayed. We renamed the notebook
+``test\_LVV-T151.ipynb''.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 5 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3529,11 +1966,23 @@ tab = results.to\_table()
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The Notebook Aspect has some tools implemented that execute queries
+using `pyvo', so we use those instead of directly accessing the
+TAPService with pyvo as follows:\\[2\baselineskip]import pandas\\
+from jupyterlabutils.notebook import get\_catalog,
+retrieve\_query\\[2\baselineskip]pandas.set\_option('display.max\_rows',
+1000)\\
+service = get\_catalog()\\[2\baselineskip]results =
+service.search(``SELECT ra, decl, w1mpro\_ep, w2mpro\_ep, w3mpro\_ep
+FROM wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS', ra, decl),
+CIRCLE('ICRS', 192.85, 27.13, .2)) = 1'')\\
+tab = results.to\_table()\\[2\baselineskip]This returns a table with
+97058 entries.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 6 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3575,11 +2024,17 @@ file size as listed:
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The files appear on disk. Note, however, that the predicted file sizes
+listed above are not what resulted. Here are the results from a command
+line:\\[2\baselineskip]\$ ls -ltrh test.*\\
+-rw-r--r-- 1 jcarlin 3.8M Aug 20 00:37 test.csv\\
+-rw-r--r-- 1 jcarlin 13M Aug 20 00:37 test.vot\\
+-rw-r--r-- 1 jcarlin 3.8M Aug 20 00:37 test.fits
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 7 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3611,11 +2066,15 @@ Print statement produces output ``97058 97058 97058''.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+Executing the above code yields the following output:
+97058 97058 97058
+\end{verbatim}
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
- & Status: \textbf{ Not Executed } \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
 8 & Description \\
  & \begin{minipage}[t]{15cm}
@@ -3641,6 +2100,2305 @@ select one of the following:\\[2\baselineskip]
 You will be returned to the LSP landing page:
 \url{https://lsst-lsp-stable.ncsa.illinois.edu/} It is now safe to close
 the browser window.~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Logged out, exited the Notebook Aspect, and closed the browser window.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T133 - Verify implementation of Provide Beam Projector Coordinate Calculation
+Software }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T133}{\textit{ LVV-T133 } }
+test case in Jira.
+
+Verify that the DMS provides software to calculate coordinates relating
+the collimated beam projector position and telescope pupil position to
+the illumination position on the telescope optical elements and focal
+plane.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Test successfully executed on `lsst-devl`.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+On the LSST development cluster or notebook aspect, git clone the repo
+containing the CBP package: \url{https://github.com/lsst/cbp}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Working in a terminal on the command line logged into
+\emph{lsst-devl02}. With the Rubin Obs/LSST stack set up:\\
+Make the directory: /project/jcarlin/cbp, and change to that directory.
+Then:\\
+git clone https://github.com/lsst/cbp.git
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Follow the steps in the package README to install the package.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+To make the package available to use, simply execute the following:\\
+cd cbp/\\
+git checkout 20.0.0 \#\#\# This step is to ensure that we are using the
+correct tagged version.\\
+setup -r .\\[2\baselineskip]Execute the setup of `lsst\_distrib` again
+to ensure that the correct version (v20.0.0) of the pipelines is
+loaded.\\
+setup -t v20\_0\_0 lsst\_distrib\\[2\baselineskip]
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the package can be loaded in python, and that some of the
+tests in the `tests/` folder will execute.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Successful execution of test scripts, which demonstrate the calculation
+of beam projector coordinates.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+From the command line, launch ipython and confirm that the package can
+be loaded:\\[2\baselineskip]ipython\\
+In {[}\textbf{1}{]}: \textbf{import}
+\textbf{lsst.cbp}\\[2\baselineskip]In {[}\textbf{2}{]}: dir(lsst.cbp)\\
+Out{[}\textbf{2}{]}:\\
+{[}'BeamInfo',\\
+`CoordinateConverter',\\
+`CoordinateConverterConfig',\\
+`MaskInfo',\\
+`\_\_builtins\_\_',\\
+`\_\_cached\_\_',\\
+`\_\_dependency\_versions\_\_',\\
+`\_\_doc\_\_',\\
+`\_\_file\_\_',\\
+`\_\_fingerprint\_\_',\\
+`\_\_loader\_\_',\\
+`\_\_name\_\_',\\
+`\_\_package\_\_',\\
+`\_\_path\_\_',\\
+`\_\_repo\_version\_\_',\\
+`\_\_spec\_\_',\\
+`\_\_version\_\_',\\
+`\_\_version\_info\_\_',\\
+`beamInfo',\\
+`computeHolePositions',\\
+`coordUtils',\\
+`coordinateConverter',\\
+`coordinateConverterConfig',\\
+`maskInfo',\\
+`version'{]}\\[2\baselineskip]This was successful. The package loads,
+and we can introspect its methods via the `dir`
+command.\\[2\baselineskip]Now confirm that the tests can be executed. We
+will cycle through them one by one, confirming that the unit tests (a)
+execute, and (b) pass with status ``OK.''\\[2\baselineskip]\emph{python
+test\_computeHolePositions.py\\
+}\ldots{}.\\
+----------------------------------------------------------------------\\
+Ran 4 tests in 0.059s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordinateConverterConfig.py\\
+}\ldots{}..\\
+----------------------------------------------------------------------\\
+Ran 5 tests in 0.011s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordinateConverter.py\\
+}\ldots{}\\
+root finder mean error=2.9e-13, sdev=7.14e-13, min=4.44e-16,
+max=8.14e-12\\
+.\\
+root finder mean error=1.28e-12, sdev=1.31e-12, min=5.33e-15,
+max=5.25e-12\\
+.\\
+root finder mean error=3.26e-13, sdev=6.54e-13, min=8.88e-16,
+max=3.6e-12\\
+\ldots{}\\
+root finder mean error=2.46e-14, sdev=4.66e-15, min=2e-14,
+max=2.93e-14\\
+.\\
+Warning: recorded 14 numerical errors in computeAzAltFromBasePupil; the
+worst 5 are:\\
+error=0.00002 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 1.12925789e-06 5.50453669e+03{]}\\
+error=0.00003 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 1.57600502e-06 5.50453669e+03{]}\\
+error=0.00006 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.15616213e+04 1.48783336e-04 5.73509069e+02{]}\\
+error=0.00049 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 2.76831443e-05 5.50453669e+03{]}\\
+error=0.00071 arcsec, vectorBase={[}10000 3000 5000{]},
+vectorPupil={[}1.01833234e+04 4.00557155e-05
+5.50453669e+03{]}\\[2\baselineskip]root finder mean error=5.7e-13,
+sdev=1.22e-12, min=8.88e-16, max=5.89e-12\\
+.\\
+root finder mean error=6.24e-13, sdev=1.36e-12, min=4.44e-16,
+max=5.58e-12\\
+.\\
+root finder mean error=1.64e-14, sdev=0, min=1.64e-14, max=1.64e-14\\
+\ldots{}\ldots{}\\
+----------------------------------------------------------------------\\
+Ran 17 tests in
+13.632s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_coordUtils.py\\
+}\ldots{}\ldots{}\ldots{}\ldots{}\\
+----------------------------------------------------------------------\\
+Ran 12 tests in 0.123s\\[2\baselineskip]OK\\[2\baselineskip]\emph{python
+test\_maskInfo.py\\
+}\ldots{}.\\
+----------------------------------------------------------------------\\
+Ran 4 tests in 0.015s\\[2\baselineskip]OK
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1759 - Verify calculation of photometric outliers in gri bands }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1759}{\textit{ LVV-T1759 } }
+test case in Jira.
+
+Verify that the DM system has provided the code to calculate the
+photometric repeatability in the g, r, and i filters, and assess whether
+it meets the requirement that no more than \textbf{PF1 =
+10{[}percent{]}} of the repeatability outliers exceed the outlier limit
+of \textbf{PA2gri = 15 millimagnitudes}.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset containing at least one field in each of the g, r,
+and i filters with multiple overlapping visits.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset that has been ingested into a Butler repository.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+The `path` that you will use depends on where you are running the
+science pipelines. Options:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  local (newinstall.sh - based
+  install):{[}path\_to\_installation{]}/loadLSST.bash
+\item
+  development cluster (``lsst-dev''):
+  /software/lsstsw/stack/loadLSST.bash
+\item
+  LSP Notebook aspect (from a terminal):
+  /opt/lsst/software/stack/loadLSST.bash
+\end{itemize}
+
+From the command line, execute the commands below in the example
+code:\\[2\baselineskip]
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+source `path`\\
+setup lsst\_distrib
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Science pipeline software is available for use. If additional packages
+are needed (for example, `obs' packages such as `obs\_subaru`), then
+additional `setup` commands will be necessary.\\[2\baselineskip]To check
+versions in use, type:\\
+eups list -s
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `validate\_drp` on a repository containing precursor data.
+Identify the path to the data, which we will call `DATA/path', then
+execute the following (with additional flags specified as needed):
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+validateDrp.py `DATA/path`
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+JSON files (and associated figures) containing the Measurements and any
+associated ``extras.''
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An example of the call to execute `matchedVisitMetrics` (which runs the
+metrics portion of `validate\_drp` on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-G
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=11690\^{}11692\^{}11694\^{}11696\^{}11698\^{}11700\^{}11702\^{}11704\^{}11706\^{}11708\^{}11710\^{}11712\^{}29324\^{}29326\^{}29336\^{}29340\^{}29350
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the metric PA2gri has been calculated using the threshold
+PF1, and that its values are reasonable.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A JSON file (and/or a report generated from that JSON file)
+demonstrating that PA2gri has been calculated (and that it used PF1).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-G-251998.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]PA2 -- HSC-G -- 28.8 mmag\\
+PF1 -- HSC-G -- 30.2 \%\\
+PA2 -- HSC-I -- 32.6 mmag\\
+PF1 -- HSC-I -- 34.6 \%\\
+PA2 -- HSC-R -- 33.4 mmag\\
+PF1 -- HSC-R -- 34.4 \%\\[2\baselineskip]Note that because the science
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1758 - Verify calculation of photometric outliers in uzy bands }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{\textit{ LVV-T1758 } }
+test case in Jira.
+
+Verify that the DM system has provided the code to calculate the
+photometric repeatability in the u, z, and y filters, and assess whether
+it meets the requirement that no more than \textbf{PF1 =
+10{[}percent{]}} of the repeatability outliers exceed the outlier limit
+of \textbf{PA2uzy = 22.5 millimagnitudes}.~
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Initial Pass }
+
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset containing at least one field in each of the u, z,
+and y filters with multiple overlapping visits.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset that has been ingested into a Butler repository.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+The `path` that you will use depends on where you are running the
+science pipelines. Options:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  local (newinstall.sh - based
+  install):{[}path\_to\_installation{]}/loadLSST.bash
+\item
+  development cluster (``lsst-dev''):
+  /software/lsstsw/stack/loadLSST.bash
+\item
+  LSP Notebook aspect (from a terminal):
+  /opt/lsst/software/stack/loadLSST.bash
+\end{itemize}
+
+From the command line, execute the commands below in the example
+code:\\[2\baselineskip]
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+source `path`\\
+setup lsst\_distrib
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Science pipeline software is available for use. If additional packages
+are needed (for example, `obs' packages such as `obs\_subaru`), then
+additional `setup` commands will be necessary.\\[2\baselineskip]To check
+versions in use, type:\\
+eups list -s
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `validate\_drp` on a repository containing precursor data.
+Identify the path to the data, which we will call `DATA/path', then
+execute the following (with additional flags specified as needed):
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+validateDrp.py `DATA/path`
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+JSON files (and associated figures) containing the Measurements and any
+associated ``extras.''
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An example of the call to execute `matchedVisitMetrics` (which runs the
+metrics portion of `validate\_drp` on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-Y
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=318\^{}322\^{}324\^{}326\^{}328\^{}330\^{}332\^{}344\^{}346\^{}348\^{}350\^{}352\^{}354\^{}356\^{}358\^{}360\^{}362\^{}1868\^{}1870\^{}1872\^{}1874\^{}1876\^{}1880\^{}1882\^{}11718\^{}11720\^{}11722\^{}11724\^{}11726\^{}11728\^{}11730\^{}11732\^{}11734\^{}11736\^{}11738\^{}11740\^{}22602\^{}22604\^{}22606\^{}22608\^{}22626\^{}22628\^{}22630\^{}22632\^{}22642\^{}22644\^{}22646\^{}22648\^{}22658\^{}22660\^{}22662\^{}22664
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the metric PA2uzy has been calculated using the threshold
+PF1, and that its values are reasonable.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A JSON file (and/or a report generated from that JSON file)
+demonstrating that PA2uzy has been calculated (and that it used PF1).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-Y-252002.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]PA2 -- HSC-Y -- 34.2 mmag\\
+PF1 -- HSC-Y -- 20.5 \%\\
+PA2 -- HSC-Z -- 27.4 mmag\\
+PF1 -- HSC-Z -- 15.6 \%\\[2\baselineskip]Note that because the science
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.\\[2\baselineskip]This step is given a status of
+``Initial Pass'' because there are no u-band data to test on. We have
+demonstrated that the capability is provided, but simply do not have
+data to pass through the code.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Initial Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1756 - Verify calculation of photometric repeatability in uzy filters }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{\textit{ LVV-T1756 } }
+test case in Jira.
+
+Verify that the DM system has provided the code to calculate the RMS
+photometric repeatability of bright non-saturated unresolved point
+sources in the u, z, and y filters, and assess whether it meets the
+requirement that it shall be less than \textbf{PA1uzy = 7.5
+millimagnitudes}.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Initial Pass }
+
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.\\[2\baselineskip]Also note that because there
+are no sufficient u-band data for testing, we currently are only able to
+test this requirement on y- and z-band data. This is the reason the
+status is ``Initial Pass'' rather than ``Pass.''
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset containing at least one field in each of the u, z,
+and y filters with multiple overlapping visits.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset that has been ingested into a Butler repository.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `validate\_drp` on a repository containing precursor data.
+Identify the path to the data, which we will call `DATA/path', then
+execute the following (with additional flags specified as needed):
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+validateDrp.py `DATA/path`
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+JSON files (and associated figures) containing the Measurements and any
+associated ``extras.''
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru\\[2\baselineskip]An example of the call to execute
+`matchedVisitMetrics` (which runs the metrics portion of `validate\_drp`
+on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-Y
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=318\^{}322\^{}324\^{}326\^{}328\^{}330\^{}332\^{}344\^{}346\^{}348\^{}350\^{}352\^{}354\^{}356\^{}358\^{}360\^{}362\^{}1868\^{}1870\^{}1872\^{}1874\^{}1876\^{}1880\^{}1882\^{}11718\^{}11720\^{}11722\^{}11724\^{}11726\^{}11728\^{}11730\^{}11732\^{}11734\^{}11736\^{}11738\^{}11740\^{}22602\^{}22604\^{}22606\^{}22608\^{}22626\^{}22628\^{}22630\^{}22632\^{}22642\^{}22644\^{}22646\^{}22648\^{}22658\^{}22660\^{}22662\^{}22664
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the metric PA1uzy has been calculated, and that its values
+are reasonable.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A JSON file (and/or a report generated from that JSON file)
+demonstrating that PA1uzy has been calculated.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-Y-252002.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]PA1 -- HSC-Y -- 15.5 mmag\\
+PA1 -- HSC-Z -- 12.9 mmag\\[2\baselineskip]Note that because the science
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.\\[2\baselineskip]This step is given a status of
+``Initial Pass'' because there are no u-band data to test on. We have
+demonstrated that the capability is provided, but simply do not have
+data to pass through the code.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Initial Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1757 - Verify calculation of photometric repeatability in gri filters }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1757}{\textit{ LVV-T1757 } }
+test case in Jira.
+
+Verify that the DM system has provided the code to calculate the RMS
+photometric repeatability of bright non-saturated unresolved point
+sources in the g, r, and i filters, and assess whether it meets the
+requirement that it shall be less than \textbf{PA1gri = 5.0
+millimagnitudes}.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\Note that this test is being executed using `validate\_drp`, which will
+be deprecated and replaced with a new metrics framework once the Gen3
+butler becomes available. Nonetheless, the test is valid, because the
+algorithm(s) to calculate the metrics are the same, and will be moved
+into the new framework.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset containing at least one field in each of the g, r,
+and i filters with multiple overlapping visits.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A dataset that has been ingested into a Butler repository.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We will use the HSC ``RC2'' data that were reprocessed with the release
+candidate of Science Pipelines v20.0. These are located at
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349` on the development
+machines.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `validate\_drp` on a repository containing precursor data.
+Identify the path to the data, which we will call `DATA/path', then
+execute the following (with additional flags specified as needed):
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+validateDrp.py `DATA/path`
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+JSON files (and associated figures) containing the Measurements and any
+associated ``extras.''
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+To select the v20.0 release of the Science Pipelines, we entered the
+following:\\[2\baselineskip]setup -t v20\_0\_0 lsst\_distrib\\
+setup obs\_subaru\\[2\baselineskip]An example of the call to execute
+`matchedVisitMetrics` (which runs the metrics portion of `validate\_drp`
+on data that have already been
+processed):\\[2\baselineskip]matchedVisitMetrics.py
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349 --output
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/validateDrp/matchedVisitMetrics/9813/HSC-G
+--config doApplyExternalPhotoCalib=True doApplyExternalSkyWcs=True
+instrumentName=HSC datasetName=HSC-RC2 --id tract=9813
+visit=11690\^{}11692\^{}11694\^{}11696\^{}11698\^{}11700\^{}11702\^{}11704\^{}11706\^{}11708\^{}11710\^{}11712\^{}29324\^{}29326\^{}29336\^{}29340\^{}29350
+ccd=0..8\^{}10..103\\[2\baselineskip]This process is included as part of
+the regular RC2 reprocessing. See the log for this and other runs of
+`matchedVisitMetrics` in
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the metric PA1gri has been calculated, and that its values
+are reasonable.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A JSON file (and/or a report generated from that JSON file)
+demonstrating that PA1gri has been calculated.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+By executing ``reportPerformance
+/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349/qaLogs/matchedVisitMetrics/matchedVisitMetrics-9813-HSC-G-251998.log'',
+a report is generated summarizing all of the metrics that were measured
+by `validate\_drp`. The relevant lines showing results for PA2 and PF1
+from tract 9813 are:\\[2\baselineskip]PA1 -- HSC-G -- 13.5 mmag\\
+PA1 -- HSC-I -- 14.9 mmag\\
+PA1 -- HSC-R -- 15.5 mmag\\[2\baselineskip]Note that because the science
+pipelines are still in development, the values for these metrics are not
+the focus of this test; the actual performance will be verified during
+commissioning on LSST data using this code. The requirement to be
+satisfied is that we have (a) provided the software to calculate them,
+and (b) provided a framework for comparing them to requirements. These
+are both satisfied.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T125 - Verify implementation of Simulated Data }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T125}{\textit{ LVV-T125 } }
+test case in Jira.
+
+Verify that the DMS can inject simulated data into data products for
+testing.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\This test demonstrates that the injected fake sources are visible, and
+that their measured magnitudes match the input values. However, future
+exploration should probably test the same for a variety of artificial
+sources (i.e., including galaxies).
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset that has been (or can be readily) processed through
+single-frame processing and coaddition.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The `calexp` and `deepCoadd\_calexp` images and their associated source
+catalogs are created.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We executed this test on the regularly reprocessed HSC-RC2 dataset. It
+is now part of routine processing to insert artificial sources into the
+data.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Roughly determine the coordinates of a bounding box that is contained
+within the images that were processed.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+RA, Dec boundaries of a region in which to generate fake sources.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted a single patch, and then selected only the fake sources
+within that RA, Dec box.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Generate a catalog in the correct format for `insertFakes` to accept.
+The catalog should specify positions and magnitudes of stars (and
+optionally, parameters specifying galaxy shape, if galaxies are also
+being inserted).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An input catalog of fake source positions and magnitudes to be inserted
+into the images.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This step was performed prior to the test. We did, however, load the
+fakes catalog from the butler repository and examined them
+using:\\[2\baselineskip]fakeSourceCat =
+butler\_mb.get('deepCoadd\_fakeSourceCat', dataId = dataIdCoadd)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute `insertFakes.py` on the repository, specifying the input catalog
+from the previous step.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A repository with images that have fake sources inserted.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We confirmed that the number of sources in the `forced\_src` photometry
+catalog~\emph{including fakes} is larger than the catalog without fakes.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run `multiBandDriver.py` on the repository, specifying the fake-source
+repository as the input.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+`calexp` and coadd images containing the artificial sources and sources
+catalogs that contain their measurements along with the sources detected
+in the original run.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+See the associated notebook, test\_LVV-T125.ipynb, which shows
+comparisons of images with and without fake sources, and differences of
+images (to highlight the fake sources that are left after subtracting
+off the original image).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Confirm that the injected sources appear in the images and the catalogs.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Fake sources and their measured properties are recoverable.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+By extracting the detected/measured sources that correspond to the input
+fakes, we compared the photometry and confirmed that the magnitudes of
+input fake sources are recovered.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T36 - Verify implementation of Difference Exposures }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T36}{\textit{ LVV-T36 } }
+test case in Jira.
+
+Verify successful creation of a\\
+1. PSF-matched template image for a given Processed Visit Image\\
+2. Difference Exposure from each Processed Visit Image
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\See associated Jupyter notebooks `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+The `path` that you will use depends on where you are running the
+science pipelines. Options:\\[2\baselineskip]
+
+\begin{itemize}
+\tightlist
+\item
+  local (newinstall.sh - based
+  install):{[}path\_to\_installation{]}/loadLSST.bash
+\item
+  development cluster (``lsst-dev''):
+  /software/lsstsw/stack/loadLSST.bash
+\item
+  LSP Notebook aspect (from a terminal):
+  /opt/lsst/software/stack/loadLSST.bash
+\end{itemize}
+
+From the command line, execute the commands below in the example
+code:\\[2\baselineskip]
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+source `path`\\
+setup lsst\_distrib
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Science pipeline software is available for use. If additional packages
+are needed (for example, `obs' packages such as `obs\_subaru`), then
+additional `setup` commands will be necessary.\\[2\baselineskip]To check
+versions in use, type:\\
+eups list -s
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Perform the steps of Alert Production (including, but not necessarily
+limited to, single frame processing, ISR, source detection/measurement,
+PSF estimation, photometric and astrometric calibration, difference
+imaging, DIASource detection/measurement, source association). During
+Operations, it is presumed that these are automated for a given
+dataset.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An output dataset including difference images and DIASource and
+DIAObject measurements.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+These tests were executed using processed data from DECam/HiTS and HSC
+PDR2 (the COSMOS field - tract 9813). The processing with the Alert
+Production payload was executed prior to the start of this testing.
+Paths to the data are given in the accompanying Jupyter notebooks.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that the expected data products have been produced, and that
+catalogs contain reasonable values for measured quantities of interest.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+See the accompanying notebooks, titled `test\_LVV-T36.ipynb` and
+`test\_LVV-T36-HiTS.ipynb`. The expected images and catalogs are
+present, and were inspected to ensure that they are well-formed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Demonstrate successful creation of a template image from HSC PDF and
+DECAM HiTS data. ~Demonstrate successful creation of a Difference
+Exposure for at least 10 other images from survey, ideally at a range of
+arimass. ~In particular, HiTS has 2013A u-band data. ~While the Blanco
+4-m does have an ADC, there are still some chromatic effects and we
+should demonstrate that we can successfully produce Difference Exposures
+and templates for diferent airmass bins.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This was done for 11 images from HSC at a range of airmasses, and images
+from DECam HiTS data. The difference exposures were shown to have zero
+mean flux, as expected, and visually inspected to confirm that they are
+well-formed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T39 - Verify implementation of Generate Photometric Zeropoint for Visit Image }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T39}{\textit{ LVV-T39 } }
+test case in Jira.
+
+Verify that Processed Visit Image data products produced by the DRP and
+AP pipelines include the parameters of a model that relates the observed
+flux on the image to physical flux units.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\See associated Jupyter notebook `test\_LVV-T39.ipynb`.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify a dataset with processed visit images in multiple filters.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We will use HSC-RC2 data that was processed with the v20.0 science
+pipelines. The output repo is tagged with the Jira ticket number
+``DM-25349'':\\
+rc2\_repo =
+`/datasets/hsc/repo/rerun/RC/v20\_0\_0\_rc1/DM-25349-sfm'\\[2\baselineskip]We
+also repeat each test on data from the difference image repo at the
+following path on the `lsst-devl` servers:\\
+diffim\_repo = `/project/mrawls/cosmos/rerun/ap\_pipe-g-202007'
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+butler = dafPersist.Butler(rc2\_repo)\\[2\baselineskip]The data is
+available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Extract the photometric zeropoint from the source catalog associated
+with a visit image. Repeat this for all available filters, and confirm
+that the zeropoint has been set, and has a reasonable value.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A zeropoint that enables one to convert the measured fluxes to
+magnitudes.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In the notebook associated with this test -- `test\_LVV-T39.ipynb` -- we
+extract the zeropoints, fluxes, and magnitudes, and confirm that the
+conversion between fluxes and magnitudes is enabled, and that it
+round-trips succesfully.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Extract fluxes for some sources, and convert them to magnitudes. Confirm
+that the distribution spans a reasonable range.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In most cases, well-measured magnitudes (i.e., for high S/N
+measurements) should be between 12 to 28 for all bands.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted fluxes for 500 sources at random, and confirmed that
+converting their fluxes to magnitudes yields reasonable values for all
+stars.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T38 - Verify implementation of Processed Visit Images }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{\textit{ LVV-T38 } }
+test case in Jira.
+
+Verify that the DMS\\
+1. Successfully produces Processed Visit Images, where the instrument
+signature has been removed.\\
+2. Successfully combines images obtained during a standard visit.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify suitable precursor datasets containing unprocessed raw images.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.\\[2\baselineskip]These tests were executed using
+processed data from DECam/HiTS. The processing with the Alert Production
+payload was executed prior to the start of this testing. The path to the
+data are given in the accompanying Jupyter notebook entitled
+`test-T38\_42.ipynb`.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The path where Meredith regularly re-runs HiTS data through diff
+imaging:\\
+diffim\_repo =
+`/project/mrawls/hits2015/rerun/cw\_2020\_06'\\[2\baselineskip]butler =
+dafPersist.Butler(diffim\_repo)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run the Prompt Processing payload on these data. ~Verify that Processed
+Visit Images are generated at correct size and with significant
+instrumental artifacts removed.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Raw precursor dataset images have been processed into Processed Visit
+Images, with instrumental artifacts corrected.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In the associated notebook, we have examined a raw image and a processed
+visit image (also known as a ``calexp'') side-by-side, and confirmed
+that (a) the calexp is well-formed, and that (b) the instrumental
+artifacts have been corrected.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T42 - Verify implementation of Processed Visit Image Content }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{\textit{ LVV-T42 } }
+test case in Jira.
+
+Verify that Processed Visit Images produced by the DRP and AP pipelines
+include the observed data, a mask array, a variance array, a PSF model,
+and a WCS model.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\In this test, we have used precursor data from DECam for verification,
+but any suitable precursor data would be sufficient. When ComCam data
+become available, this test should be executed on them.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was executed on the Science Platform Notebook Aspect with
+version 20.0.0 set up.\\[2\baselineskip]These tests were executed using
+processed data from DECam/HiTS. The processing with the Alert Production
+payload was executed prior to the start of this testing. The path to the
+data are given in the accompanying Jupyter notebook entitled
+`test-T38\_42.ipynb`.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Ingest the data from an appropriate processed dataset.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The path where Meredith regularly re-runs HiTS data through diff
+imaging:\\
+diffim\_repo =
+`/project/mrawls/hits2015/rerun/cw\_2020\_06'\\[2\baselineskip]butler =
+dafPersist.Butler(diffim\_repo)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select a single visit from the dataset, and extract its WCS object,
+calexp image, psf model, and source list.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+See the relevant code in the associated notebook. All of these objects
+were selected as ``wcs'', ``calexp.image'', ``psf'', and ``src.''
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Inspect the calexp image to ensure that
+
+\begin{enumerate}
+\tightlist
+\item
+  A well-formed image is present,
+\item
+  The variance plane is present and well-behaved,
+\item
+  Mask planes are present and contain information about defects.
+\end{enumerate}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An astronomical image with mask and variance planes. This can be readily
+visualized using Firefly, which displays mask planes by default.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The images of both the calexp and its variance plane are well-formed. We
+confirmed the presence of a mask plane and the meanings of its bit
+values using afwDisplay within the Jupyter notebook.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Plot images of the PSF model at various points, and verify that the PSF
+differs with position.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A ``star-like'' image of the PSF evaluated at various positions. The PSF
+should vary slightly with position (this could be readily visualized by
+taking a difference of PSFs at two positions).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We extracted an image of the PSF at two random positions and noted that
+they were well-formed. We then took the difference of the two PSFs,
+which showed clear differences between them. We thus confirmed that the
+PSF differs as a function of position.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Starting from the XY pixel coordinates of the sources, apply the WCS to
+obtain RA, Dec coordinates. Plot these positions and confirm that they
+match the expected values from the WCS object.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+RA, Dec coordinates that are returned should be near the central
+position of the visit coordinate as given in either the calexp metadata
+or the WCS.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This was executed for all sources on a CCD in a processed visit image.
+The XY positions converted to (RA, Dec) were confirmed to match the
+expected position as given by the WCS.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Repeat steps 2-6, but now with difference images created by the Alert
+Production pipeline (for example, in the `ap\_verify` test data
+processing).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+These steps were repeated for a difference image. Results of this
+successful test can be seen in the associated notebook.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T1264 - Verify implementation of archiving camera test data }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{\textit{ LVV-T1264 } }
+test case in Jira.
+
+Verify that a subset of camera test data has been ingested into Butler
+repos and is available through standard data access tools.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\See associated Jupyter notebook in `test\_LVV-T1264.ipynb`. This test
+used data products created and ingested as part of the Operations
+Rehearsal detailed in \citeds{DMTR-231}: LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Obtain some data on a camera test stand.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+ComCam data were obtained as part of the July 2020 Operations Rehearsal
+(see the report in DMTR-231: ``LDM-503-11a: ComCam OPS Readiness Test
+Plan and Report'').~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Wait a sufficient amount of time, then confirm that automatic
+transfer/ingest of the data has occurred, and a repo is available at
+NCSA.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The data is present at NCSA in non-empty repos.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This was verified as part of LVV-T1934, which was a test to confirm that
+the data were transferred and ingested successfully from the Base
+Facility to NCSA.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the relevant Butler repo of ingested camera test stand data.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+We used the data from July 29, 2020, at the following path:\\
+repo\_path = `/project/shared/comCam/rerun/CALSET\_20200729\_1847\_v2/'
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\begin{verbatim}
+import lsst.daf.persistence as dafPersist
+butler = dafPersist.Butler(inputs='DATA/path')
+\end{verbatim}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Butler repo available for reading.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+repo\_path =
+`/project/shared/comCam/rerun/CALSET\_20200729\_1847\_v2/'\\
+butler = dafPersist.Butler(repo\_path)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Read various repo data products with the Butler, and confirm that they
+contain the expected data.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Camera test stand data that is well-formed.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+In the associated Jupyter notebook entitled `test\_LVV-T1264.ipynb`, we
+loaded a bias and a flat image from the above repo. Each of these was
+displayed to confirm that it was a well-formed image, and histograms of
+the count values were plotted to show that the counts were as expected
+(i.e., that the bias values are centered on roughly 0.0, and the flat
+values on roughly 1.0).
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T146 - Verify implementation of DMS Initialization Component }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{\textit{ LVV-T146 } }
+test case in Jira.
+
+Demonstrate that the DMS can be initialized in a safe state that will
+not allow data corruption/loss.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\After some discussion, it was decided to defer this test to a later
+campaign. This is due in part to the lack of on-site personnel at some
+sites to execute the test. More importantly, however, is the need to
+understand whether this should be divided into multiple tests that
+address hardware at each of the various sites that are part of the DMS,
+and whether those systems should all be taken down simultaneously, or
+tested separately. We hope to execute this test as part of the next
+Operations Rehearsal.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Power-cycle all of the DM systems at each Facility.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Restart of all DM systems.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Observe each system and ensure that it has recovered in a properly
+initialized state.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Systems are all active and initialized for their designated purpose.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T144 - Verify implementation of Task Specification }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{\textit{ LVV-T144 } }
+test case in Jira.
+
+Verify that the DMS provides the ability to define a new or modified
+pipeline task without recompilation.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task specification and execution are in active
+development, we will defer this test to a later campaign that takes
+place after Gen3 has stabilized.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Inspect software architecture. ~Verify that there exist Tasks that can
+be run and configured without re-compilation.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmation that the software architecture has allowed for
+reconfiguring and running Tasks without recompilation.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that an example science algorithm can be run through one of these
+Tasks.~ Three examples from different areas: source measurement, image
+subtraction, and photometric-redshift estimation.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Successful Task execution with different configurations, including
+confirmation that the outputs are different from tasks with altered
+configurations.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{ LVV-T145 - Verify implementation of Task Configuration }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{\textit{ LVV-T145 } }
+test case in Jira.
+
+Verify that the DMS software provides configuration control to define,
+override, and verify the configuration for a DMS Task.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\The Gen3 Butler rollout was delayed, so this test was not executed.
+Because many aspects of task configuration, specification, and execution
+are in active development, we will defer this test to a later campaign
+that takes place after Gen3 has stabilized.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Inspect software design to verify that one can define the configuration
+for a Task.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run a Task with a known invalid configuration. ~Verify that the error is
+caught before the science algorithm executes.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Run a simple task with two different configurations that make a material
+difference for a Task. ~E.g., specify a different source detection
+threshold. ~Verify that the configuration is different between the two
+runs through difference in recorded provenance and in results.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3675,7 +4433,12 @@ Verify that the DMS produces a Prompt Processing Data Quality Report.
 
 Execution status: {\bf Not Executed }
 
-Final comment:\\
+Final comment:\\This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Data Quality Report
+would be available by the time of this Test Campaign. Because the report
+has not yet been defined, nor the automated pipeline to ingest and
+process data, then generate the report, we defer this test to a later
+campaign.
 
 
 Detailed steps results:
@@ -3820,21 +4583,31 @@ the same information as in the report from Step 3.
 
 \end{longtable}
 
-\paragraph{ LVV-T146 - Verify implementation of DMS Initialization Component }\mbox{}\\
+\paragraph{ LVV-T46 - Verify implementation of Prompt Processing Performance Report Definition }\mbox{}\\
 
 Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{\textit{ LVV-T146 } }
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T46}{\textit{ LVV-T46 } }
 test case in Jira.
 
-Demonstrate that the DMS can be initialized in a safe state that will
-not allow data corruption/loss.
+Verify that the DMS produces a Prompt Processing Performance Report.
+~Specifically check that the number of observations that describe each
+of the following:\\
+1. Successfully processed, recoverable failures, unrecoverable
+failures.\\
+2. Archived\\
+3. Result in science.\\[2\baselineskip]This is testing more the
+processing rather than the observatory system.
 
 \textbf{ Preconditions}:\\
 
 
 Execution status: {\bf Not Executed }
 
-Final comment:\\
+Final comment:\\This test was included because it was anticipated that the
+infrastructure to produce the Prompt Processing Performance Report would
+be available by the time of this Test Campaign. Because the report has
+not yet been defined, nor the automated pipeline to ingest and process
+data, then generate the report, we defer this test to a later campaign.
 
 
 Detailed steps results:
@@ -3845,7 +4618,7 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-Power-cycle all of the DM systems at each Facility.
+Execute single-day operations rehearsal, observe report
 
 \medskip }
 \end{minipage}
@@ -3854,374 +4627,6 @@ Power-cycle all of the DM systems at each Facility.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-Restart of all DM systems.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Observe each system and ensure that it has recovered in a properly
-initialized state.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Systems are all active and initialized for their designated purpose.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T144 - Verify implementation of Task Specification }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{\textit{ LVV-T144 } }
-test case in Jira.
-
-Verify that the DMS provides the ability to define a new or modified
-pipeline task without recompilation.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Inspect software architecture. ~Verify that there exist Tasks that can
-be run and configured without re-compilation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Confirmation that the software architecture has allowed for
-reconfiguring and running Tasks without recompilation.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Verify that an example science algorithm can be run through one of these
-Tasks.~ Three examples from different areas: source measurement, image
-subtraction, and photometric-redshift estimation.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Successful Task execution with different configurations, including
-confirmation that the outputs are different from tasks with altered
-configurations.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T145 - Verify implementation of Task Configuration }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{\textit{ LVV-T145 } }
-test case in Jira.
-
-Verify that the DMS software provides configuration control to define,
-override, and verify the configuration for a DMS Task.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Inspect software design to verify that one can define the configuration
-for a Task.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run a Task with a known invalid configuration. ~Verify that the error is
-caught before the science algorithm executes.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Run a simple task with two different configurations that make a material
-difference for a Task. ~E.g., specify a different source detection
-threshold. ~Verify that the configuration is different between the two
-runs through difference in recorded provenance and in results.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{ LVV-T1264 - Verify implementation of archiving camera test data }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1264}{\textit{ LVV-T1264 } }
-test case in Jira.
-
-Verify that a subset of camera test data has been ingested into Butler
-repos and is available through standard data access tools.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Obtain some data on a camera test stand.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Wait a sufficient amount of time, then confirm that automatic
-transfer/ingest of the data has occurred, and a repo is available at
-NCSA.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-The data is present at NCSA in non-empty repos.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the relevant Butler repo of ingested camera test stand data.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Example Code \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-\begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
-\end{verbatim}
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Butler repo available for reading.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-Read various repo data products with the Butler, and confirm that they
-contain the expected data.
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Camera test stand data that is well-formed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
